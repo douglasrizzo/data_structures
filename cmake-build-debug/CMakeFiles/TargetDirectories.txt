@@ -1,4 +1,0 @@
-/home/dodo/Cloud/FEI/Matérias/PEL 216 - Programação Científica/aula1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/dodo/Cloud/FEI/Matérias/PEL 216 - Programação Científica/aula1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/dodo/Cloud/FEI/Matérias/PEL 216 - Programação Científica/aula1/cmake-build-debug/CMakeFiles/aula1.dir
-/home/dodo/Cloud/FEI/Matérias/PEL 216 - Programação Científica/aula1/cmake-build-debug/CMakeFiles/structures.dir
