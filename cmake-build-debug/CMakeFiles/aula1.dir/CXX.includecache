@@ -1,0 +1,104 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/DataStructure.hpp
+string
+-
+
+../include/DynamicQueue.hpp
+stdexcept
+-
+iostream
+-
+Queue.hpp
+../include/Queue.hpp
+ProtectedLinkedList.hpp
+../include/ProtectedLinkedList.hpp
+
+../include/DynamicStack.hpp
+stdexcept
+-
+iostream
+-
+Stack.hpp
+../include/Stack.hpp
+ProtectedLinkedList.hpp
+../include/ProtectedLinkedList.hpp
+
+../include/LinkedList.hpp
+iostream
+-
+ProtectedLinkedList.hpp
+../include/ProtectedLinkedList.hpp
+
+../include/Node.hpp
+stddef.h
+-
+
+../include/OrderedList.hpp
+LinkedList.hpp
+../include/LinkedList.hpp
+
+../include/ProtectedLinkedList.hpp
+string
+-
+stdexcept
+-
+Node.hpp
+../include/Node.hpp
+DataStructure.hpp
+../include/DataStructure.hpp
+
+../include/Queue.hpp
+string
+-
+DataStructure.hpp
+../include/DataStructure.hpp
+
+../include/Stack.hpp
+string
+-
+DataStructure.hpp
+../include/DataStructure.hpp
+
+../include/StaticQueue.hpp
+stdexcept
+-
+string
+-
+Queue.hpp
+../include/Queue.hpp
+
+../include/StaticStack.hpp
+stdexcept
+-
+string
+-
+Stack.hpp
+../include/Stack.hpp
+
+/home/dodo/Cloud/FEI/Matérias/PEL 216 - Programação Científica/aula1/test/main.cpp
+iostream
+-
+random
+-
+ctime
+-
+DynamicStack.hpp
+/home/dodo/Cloud/FEI/Matérias/PEL 216 - Programação Científica/aula1/test/DynamicStack.hpp
+StaticQueue.hpp
+/home/dodo/Cloud/FEI/Matérias/PEL 216 - Programação Científica/aula1/test/StaticQueue.hpp
+StaticStack.hpp
+/home/dodo/Cloud/FEI/Matérias/PEL 216 - Programação Científica/aula1/test/StaticStack.hpp
+DynamicQueue.hpp
+/home/dodo/Cloud/FEI/Matérias/PEL 216 - Programação Científica/aula1/test/DynamicQueue.hpp
+LinkedList.hpp
+/home/dodo/Cloud/FEI/Matérias/PEL 216 - Programação Científica/aula1/test/LinkedList.hpp
+OrderedList.hpp
+/home/dodo/Cloud/FEI/Matérias/PEL 216 - Programação Científica/aula1/test/OrderedList.hpp
+
