@@ -1,0 +1,5 @@
+<map id="DynamicStack::getSize" name="DynamicStack::getSize">
+<area shape="rect" id="node2" href="$classDynamicStack.html#aa1158439339841e5f2b8cc046ae12e16" title="Add an element to the top of the stack. " alt="" coords="213,5,357,32"/>
+<area shape="rect" id="node3" href="$classDynamicStack.html#a4c043733eaa25b1f3b74bb1365fbe767" title="Remove an element from the top of the stack. " alt="" coords="217,56,354,83"/>
+<area shape="rect" id="node4" href="$classDynamicStack.html#ae4893a1adca326d46846fa0fe13a6956" title="See the value from the top of the stack, without removing it. " alt="" coords="213,107,357,133"/>
+</map>

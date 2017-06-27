@@ -1,0 +1,5 @@
+<map id="Stack&lt; T &gt;" name="Stack&lt; T &gt;">
+<area shape="rect" id="node3" href="$classDynamicStack.html" title="Stack implementation with dynamic memory allocation. " alt="" coords="5,366,145,561"/>
+<area shape="rect" id="node4" href="$classStaticStack.html" title="Stack implementation using a native C++ array as data storage. " alt="" coords="170,344,293,583"/>
+<area shape="rect" id="node2" href="$classDataStructure.html" title="Base class for all data structures. " alt="" coords="101,5,204,127"/>
+</map>

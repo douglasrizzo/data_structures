@@ -1,0 +1,5 @@
+<map id="Queue&lt; T &gt;" name="Queue&lt; T &gt;">
+<area shape="rect" id="node3" href="$classDynamicQueue.html" title="Queue implementation with dynamic memory allocation. " alt="" coords="5,381,149,575"/>
+<area shape="rect" id="node4" href="$classStaticQueue.html" title="Queue implementation using a native C++ array as data storage. " alt="" coords="174,344,301,612"/>
+<area shape="rect" id="node2" href="$classDataStructure.html" title="Base class for all data structures. " alt="" coords="106,5,209,127"/>
+</map>

@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pilha, Fila e Lista: Referência da Template de Classe Queue&lt; T &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Pilha, Fila e Lista
+   </div>
+   <div id="projectbrief">PEL216 - Aula de fila e pilha</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos Públicos</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência da Template de Classe Queue&lt; T &gt;<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Abstract queue interface.  
+ <a href="classQueue.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Queue_8hpp_source.html">Queue.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de Hierarquia para Queue&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classQueue__inherit__graph.svg" width="307" height="618"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Diagrama de colaboração para Queue&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classQueue__coll__graph.svg" width="114" height="302"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos Públicos</h2></td></tr>
+<tr class="memitem:a4b45e78e2739203d7e981b15512128bf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueue.html#a4b45e78e2739203d7e981b15512128bf">getName</a> ()</td></tr>
+<tr class="memdesc:a4b45e78e2739203d7e981b15512128bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the name of the data structure as a string representation.  <a href="#a4b45e78e2739203d7e981b15512128bf">Mais...</a><br /></td></tr>
+<tr class="separator:a4b45e78e2739203d7e981b15512128bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a577fdf07e5a1b31263111ef74fb981c8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueue.html#a577fdf07e5a1b31263111ef74fb981c8">enqueue</a> (T val)=0</td></tr>
+<tr class="memdesc:a577fdf07e5a1b31263111ef74fb981c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an element to the end of the queue.  <a href="#a577fdf07e5a1b31263111ef74fb981c8">Mais...</a><br /></td></tr>
+<tr class="separator:a577fdf07e5a1b31263111ef74fb981c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabbe785992fa3e8fd82853dcf467a0ab"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueue.html#aabbe785992fa3e8fd82853dcf467a0ab">dequeue</a> ()=0</td></tr>
+<tr class="memdesc:aabbe785992fa3e8fd82853dcf467a0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an element from the queue.  <a href="#aabbe785992fa3e8fd82853dcf467a0ab">Mais...</a><br /></td></tr>
+<tr class="separator:aabbe785992fa3e8fd82853dcf467a0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a830a30b1fb314b96724daaabdd79a4e9"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueue.html#a830a30b1fb314b96724daaabdd79a4e9">peek</a> ()=0</td></tr>
+<tr class="memdesc:a830a30b1fb314b96724daaabdd79a4e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">See the first value from the queue, without removing it.  <a href="#a830a30b1fb314b96724daaabdd79a4e9">Mais...</a><br /></td></tr>
+<tr class="separator:a830a30b1fb314b96724daaabdd79a4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classDataStructure"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classDataStructure')"><img src="closed.png" alt="-"/>&#160;Métodos Públicos herdados de <a class="el" href="classDataStructure.html">DataStructure</a></td></tr>
+<tr class="memitem:a191bf6a8cefbe37a58f4b02a18d9a75f inherit pub_methods_classDataStructure"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataStructure.html#a191bf6a8cefbe37a58f4b02a18d9a75f">getSize</a> ()=0</td></tr>
+<tr class="memdesc:a191bf6a8cefbe37a58f4b02a18d9a75f inherit pub_methods_classDataStructure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs the number of elements stored in the structure.  <a href="classDataStructure.html#a191bf6a8cefbe37a58f4b02a18d9a75f">Mais...</a><br /></td></tr>
+<tr class="separator:a191bf6a8cefbe37a58f4b02a18d9a75f inherit pub_methods_classDataStructure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48f100bbd9ab3e3fef0b53e7d5ac8d1 inherit pub_methods_classDataStructure"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataStructure.html#aa48f100bbd9ab3e3fef0b53e7d5ac8d1">isEmpty</a> ()=0</td></tr>
+<tr class="memdesc:aa48f100bbd9ab3e3fef0b53e7d5ac8d1 inherit pub_methods_classDataStructure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the structure is empty.  <a href="classDataStructure.html#aa48f100bbd9ab3e3fef0b53e7d5ac8d1">Mais...</a><br /></td></tr>
+<tr class="separator:aa48f100bbd9ab3e3fef0b53e7d5ac8d1 inherit pub_methods_classDataStructure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad95f9eaba5a00da2d3ef307a3136eb inherit pub_methods_classDataStructure"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataStructure.html#a7ad95f9eaba5a00da2d3ef307a3136eb">isFull</a> ()=0</td></tr>
+<tr class="memdesc:a7ad95f9eaba5a00da2d3ef307a3136eb inherit pub_methods_classDataStructure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the structure is full.  <a href="classDataStructure.html#a7ad95f9eaba5a00da2d3ef307a3136eb">Mais...</a><br /></td></tr>
+<tr class="separator:a7ad95f9eaba5a00da2d3ef307a3136eb inherit pub_methods_classDataStructure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><h3>template&lt;class T&gt;<br />
+class Queue&lt; T &gt;</h3>
+
+<p>Abstract queue interface. </p>
+<dl class="section author"><dt>Autor</dt><dd>Douglas De Rizzo Meneghetti (<a href="#" onclick="location.href='mai'+'lto:'+'dou'+'gl'+'asr'+'iz'+'zom'+'@g'+'mai'+'l.'+'com'; return false;">dougl<span style="display: none;">.nosp@m.</span>asri<span style="display: none;">.nosp@m.</span>zzom@<span style="display: none;">.nosp@m.</span>gmai<span style="display: none;">.nosp@m.</span>l.com</a>) </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>2017-6-14Abstract queue interface </dd></dl>
+<dl class="tparams"><dt>Parâmetros de template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of object the data structure will contain </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="Queue_8hpp_source.html#l00016">16</a> do arquivo <a class="el" href="Queue_8hpp_source.html">Queue.hpp</a>.</p>
+</div><h2 class="groupheader">Métodos</h2>
+<a id="aabbe785992fa3e8fd82853dcf467a0ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabbe785992fa3e8fd82853dcf467a0ab">&#9670;&nbsp;</a></span>dequeue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual T <a class="el" href="classQueue.html">Queue</a>&lt; T &gt;::dequeue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove an element from the queue. </p>
+<dl class="section return"><dt>Retorna</dt><dd>the value that is being removed </dd></dl>
+
+<p>Implementado por <a class="el" href="classStaticQueue.html#ab8a6df8ab1c657e5628b335bf94b38ad">StaticQueue&lt; T &gt;</a> e <a class="el" href="classDynamicQueue.html#aaba481ddc48bb2327a23326e69c6f245">DynamicQueue&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a577fdf07e5a1b31263111ef74fb981c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a577fdf07e5a1b31263111ef74fb981c8">&#9670;&nbsp;</a></span>enqueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classQueue.html">Queue</a>&lt; T &gt;::enqueue </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add an element to the end of the queue. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>the value to be added to the queue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implementado por <a class="el" href="classStaticQueue.html#a35e5c1ca619aac31c3352bafb9331730">StaticQueue&lt; T &gt;</a> e <a class="el" href="classDynamicQueue.html#aa0df1f79d65a9a331de7c2fd6bbb00eb">DynamicQueue&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a4b45e78e2739203d7e981b15512128bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b45e78e2739203d7e981b15512128bf">&#9670;&nbsp;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="classQueue.html">Queue</a>&lt; T &gt;::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides the name of the data structure as a string representation. </p>
+<dl class="section return"><dt>Retorna</dt><dd>name of the data structure </dd></dl>
+
+<p>Implementa <a class="el" href="classDataStructure.html#a83ef2d84e84778484e41ab829f2c8776">DataStructure</a>.</p>
+
+<p>Reimplementado por <a class="el" href="classStaticQueue.html#a77271100754bbac8960d1f04a49e6a9f">StaticQueue&lt; T &gt;</a>.</p>
+
+<p class="definition">Definição na linha <a class="el" href="Queue_8hpp_source.html#l00019">19</a> do arquivo <a class="el" href="Queue_8hpp_source.html">Queue.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Queue Interface&quot;</span>; }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a830a30b1fb314b96724daaabdd79a4e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a830a30b1fb314b96724daaabdd79a4e9">&#9670;&nbsp;</a></span>peek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual T <a class="el" href="classQueue.html">Queue</a>&lt; T &gt;::peek </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>See the first value from the queue, without removing it. </p>
+<dl class="section return"><dt>Retorna</dt><dd>The first value on the queue </dd></dl>
+
+<p>Implementado por <a class="el" href="classStaticQueue.html#a17a5e720f065b1ff387f8202e666ef4d">StaticQueue&lt; T &gt;</a> e <a class="el" href="classDynamicQueue.html#ae99fcbe790a08cac54ff1f641ddbff55">DynamicQueue&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte arquivo:<ul>
+<li>include/<a class="el" href="Queue_8hpp_source.html">Queue.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

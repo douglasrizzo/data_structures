@@ -1,0 +1,12 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="node1" href="$classDataStructure.html" title="Base class for all data structures. " alt="" coords="5,107,108,133"/>
+<area shape="rect" id="node2" href="$classProtectedLinkedList.html" title="Doubly&#45;linked list implementation with dynamic memory allocation. " alt="" coords="156,107,325,133"/>
+<area shape="rect" id="node7" href="$classQueue.html" title="Abstract queue interface. " alt="" coords="195,56,287,83"/>
+<area shape="rect" id="node9" href="$classStack.html" title="Abstract stack interface. " alt="" coords="197,157,285,184"/>
+<area shape="rect" id="node3" href="$classDynamicQueue.html" title="Queue implementation with dynamic memory allocation. " alt="" coords="373,56,517,83"/>
+<area shape="rect" id="node4" href="$classDynamicStack.html" title="Stack implementation with dynamic memory allocation. " alt="" coords="375,157,515,184"/>
+<area shape="rect" id="node5" href="$classLinkedList.html" title="Doubly&#45;linked list implementation with dynamic memory allocation. " alt="" coords="389,107,502,133"/>
+<area shape="rect" id="node6" href="$classOrderedList.html" title="Doubly&#45;linked ordered list implementation with dynamic memory allocation. " alt="" coords="565,107,687,133"/>
+<area shape="rect" id="node8" href="$classStaticQueue.html" title="Queue implementation using a native C++ array as data storage. " alt="" coords="382,5,509,32"/>
+<area shape="rect" id="node10" href="$classStaticStack.html" title="Stack implementation using a native C++ array as data storage. " alt="" coords="384,208,507,235"/>
+</map>
