@@ -52,14 +52,11 @@ public:
         return ProtectedLinkedList<T>::get(index);
     }
 
-    //! Get the index where the specified element is in the list.
-    //! \param val value to be found in the list
-    virtual int getIndex(T val) {
-        return ProtectedLinkedList<T>::getIndex(val);
-    }
-
-    virtual bool contains(T val) {
-        return ProtectedLinkedList<T>::contains(val);
+    //! Creates an Iterator, an object that allows the sequential
+    //! access of values in a Linked List without the search overhead
+    //! \return an Iterator starting from the first node of the list
+    Iterator<T> iterator() {
+        return Iterator<T>(ProtectedLinkedList<T>::getFirst());
     }
 };
 
