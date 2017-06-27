@@ -128,7 +128,10 @@ protected:
             tmp2->setValue(val);
             tmp2->setNext(tmp->getNext());
             tmp2->setPrevious(tmp);
-            tmp->getNext()->setPrevious(tmp2);
+
+            if (tmp->getNext() != NULL)
+                tmp->getNext()->setPrevious(tmp2);
+
             tmp->setNext(tmp2);
         }
         size++;
