@@ -32,20 +32,17 @@ public:
     }
 
     ~ProtectedLinkedList() {
-        delete first;
-    }
+        Node<T> *tmp;
 
-    //! String representation of the data structure
-    //! \return a string representation of the data structure
-    string to_string() {
-        string retorno;
-        Node<T> *tmp = getFirst();
-        for (int i = 0; i < size; i++) {
-            retorno.append(std::to_string(tmp->getValue())).append(" ");
-            tmp = tmp->getNext();
+        while (first != NULL) {
+            tmp = first;
+            first = first->getNext();
+            delete tmp;
         }
         retorno.append("\n");
         return retorno;
+        last = NULL;
+        size = 0;
     }
 
 protected:
