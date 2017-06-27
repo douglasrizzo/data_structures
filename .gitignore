@@ -31,3 +31,18 @@
 *.out
 *.app
 cmake-build-debug
+
+# CMake
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+
+# Project folders and files
+.idea
+*.cbp
