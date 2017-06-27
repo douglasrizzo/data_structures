@@ -39,15 +39,30 @@ public:
             first = first->getNext();
             delete tmp;
         }
-        retorno.append("\n");
-        return retorno;
         last = NULL;
         size = 0;
     }
 
 protected:
-    //! create the structure and populate it with the data from the array
-    //! \param data an array with data with which the structure will be initialized
+    Node<T> *getNode(int index) {
+        Node<T> *tmp;
+        if (index <= size - index) {
+            tmp = first;
+
+            for (int i = 0; i < index - 1; i++)
+                tmp = tmp->getNext();
+        }
+        else {
+            tmp = last;
+
+            for (int i = size - 1; i > index; i--)
+                tmp = tmp->getPrevious();
+        }
+        return tmp;
+    }
+
+//! create the structure and populate it with the data from the array
+//! \param data an array with data with which the structure will be initialized
     explicit ProtectedLinkedList(const T data[]) {
         for (int i = 0; i <= (sizeof(data) / sizeof(data[0])); i++) {
             insert(data[i]);
@@ -105,10 +120,7 @@ protected:
         }
             // if the index is in the middle of the list, it must be traversed
         else {
-            Node<T> *tmp = first;
-
-            for (int i = 0; i < index - 1; i++)
-                tmp = tmp->getNext();
+            Node<T> *tmp = getNode(index);
 
             // a new node is created and put between
             // the current node and the next one
@@ -131,9 +143,7 @@ protected:
         if (index >= size)
             throw std::out_of_range("Nonexistent index in list.");
 
-        Node<T> *tmp = first;
-        for (int i = 0; i < index; i++)
-            tmp = tmp->getNext();
+        Node<T> *tmp = getNode(index);
 
         T ret = tmp->getValue();
 
@@ -167,53 +177,30 @@ protected:
         if (index > size)
             throw std::out_of_range("Nonexistent index.");
 
-        Node<T> *tmp = first;
-
-        for (int i = 0; i < index; i++)
-            tmp = tmp->getNext();
-
-        T ret = tmp->getValue();
-
-        return ret;
+        Node<T> *tmp = getNode(index);
+        return tmp->getValue();
     }
 
-    //! Get the index where the specified element is in the list.
-    //! \param val value to be found in the list
-    virtual int getIndex(T &val) {
-        Node<T> *tmp = first;
-
-        for (int i = 0; i < getSize(); i++) {
-            // this if part needs a hack because template
-            // variables can be either pointers or objects
-            T other = tmp->getValue();
-
-            if (val == other || is_pointer<T>::value && &val == &other) {
-                // additionally, for some reason
-                // this if statement wasn't working
-                // unless I created variables
-                // instead of using reference directly, so...
-                return i;
-            }
-            else if (val == other)
-                return i;
-
-            tmp = tmp->getNext();
-        }
-
-        return NULL;
-    }
-
-    virtual bool contains(T &val) {
-        return getIndex(val) != NULL;
+    //! Creates an Iterator, an object that allows the sequential
+    //! access of values in a Linked List without the search overhead
+    //! \return an Iterator starting from the first node of the list
+    virtual Iterator<T> iterator() {
+        return Iterator<T>(first);
     }
 
 public:
 
-    int getSize() { return size; }
+    int getSize() {
+        return size;
+    }
 
-    bool isEmpty() { return size == 0; }
+    bool isEmpty() {
+        return size == 0;
+    }
 
-    bool isFull() { return false; }
+    bool isFull() {
+        return false;
+    }
 };
 
 #endif
