@@ -18,10 +18,10 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "Todos",
-  1: "Estruturas de Dados",
-  2: "Arquivos",
-  3: "Funções",
-  4: "Variáveis"
+  0: "All",
+  1: "Data Structures",
+  2: "Files",
+  3: "Functions",
+  4: "Variables"
 };
 
