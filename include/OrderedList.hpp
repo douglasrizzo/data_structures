@@ -6,6 +6,8 @@
 #define AULA1_ORDEREDLIST_HPP
 
 #include "LinkedList.hpp"
+#include <type_traits>
+#include <functional>
 
 //! Doubly-linked ordered list implementation with dynamic memory allocation.
 //! This classes searches for the appropriate place to insert an element
@@ -13,14 +15,20 @@
 //! \tparam T The type of object the data structure will contain
 template<class T>
 class OrderedList : public LinkedList<T> {
+private:
+    function<int(T, T)> compare;
+
 public:
     string getName() { return "Ordered List"; }
 
-    explicit OrderedList() {}
+    explicit OrderedList(std::function<int(T, T)> compareFunc) {
+        compare = compareFunc;
+    }
 
     //! create the structure and populate it with the data from the array
     //! \param data an array with data with which the structure will be initialized
-    explicit OrderedList(const T data[])  {
+    explicit OrderedList(const T data[], std::function<int(T, T)> compareFunc) {
+        compare = compareFunc;
         for (int i = 0; i <= (sizeof(data) / sizeof(data[0])); i++) {
             // use this class implementation of insert() to ensure order
             insert(data[i]);
@@ -34,10 +42,11 @@ public:
             LinkedList<T>::insert(val);
         }
         else {
-
             Node<T> *tmp = LinkedList<T>::getFirst();
             int index = 0;
-            while (tmp != NULL && tmp->getValue() < val) {
+            while (tmp != NULL) {
+                if(compare(val, tmp->getValue()) >= 0)
+                    break;
                 index++;
                 tmp = tmp->getNext();
             }

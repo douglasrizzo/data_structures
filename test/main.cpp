@@ -10,6 +10,15 @@
 
 using namespace std;
 
+int compare(int a, int b) {
+
+    if (a < b)
+        return -1;
+    if (a > b)
+        return 1;
+    return 0;
+}
+
 template<class T>
 void testaPilha(Stack<T> *s, int amount) {
     cout << "Inserindo " << amount << " valores na pilha de tipo " << s->getName() << "...\n";
@@ -87,37 +96,20 @@ void testaLista(LinkedList<T> *l, bool order) {
 
     cout << "\nInserindo valores na lista do tipo " << l->getName() << "...\n";
 
+    int *values = new int[8]{3, 1, 2, 8, 7, 2, 5, 2};
+    int *orders = new int[8]{0, 0, 2, 1, 4, 2, 4, 5};
+
     if (order) {
-        cout << "Valores: [2 5 4 1 6 3]\n";
-        cout << "Posição: [0 1 1 0 4 2]\n";
-        l->insert(2);
-        cout << l->to_string();
-        l->insert(5);
-        cout << l->to_string();
-        l->insert(4, 1);
-        cout << l->to_string();
-        l->insert(1, 0);
-        cout << l->to_string();
-        l->insert(6, 4);
-        cout << l->to_string();
-        l->insert(3, 2);
-        cout << l->to_string();
+        for (int i = 0; i < 8; i++) {
+            l->insert(values[i], orders[i]);
+            cout << l->to_string();
+        }
     }
     else {
-        cout << "Valores: [2 4 6 1 3 5]\n";
-        cout << "Posição: [0 1 2 3 4 5]\n";
-        l->insert(2);
-        cout << l->to_string();
-        l->insert(4);
-        cout << l->to_string();
-        l->insert(6);
-        cout << l->to_string();
-        l->insert(1);
-        cout << l->to_string();
-        l->insert(3);
-        cout << l->to_string();
-        l->insert(5);
-        cout << l->to_string();
+        for (int i = 0; i < 8; i++) {
+            l->insert(values[i]);
+            cout << l->to_string();
+        }
     }
 
     cout << "\nRemovendo valores da lista...\n";
@@ -187,7 +179,7 @@ void testaUnderflow() {
     }
 
     try {
-        OrderedList<int> l2 = OrderedList<int>(new int[3]{3, 1, 2});
+        OrderedList<int> l2 = OrderedList<int>(new int[3]{3, 1, 2}, compare);
         for (int i = 0; i < iters; i++)
             l2.remove(0);
     }
@@ -212,7 +204,7 @@ void testaUsoSatanico() {
     DynamicStack<int> s;
     DynamicQueue<int> q;
     LinkedList<int> l;
-    OrderedList<int> o;
+    OrderedList<int> o = OrderedList<int>(compare);
 
     int si = 0, qi = 0, li = 0, oi = 0;
     int so = 0, qo = 0, lo = 0, oo = 0;
@@ -277,12 +269,13 @@ int main() {
 //    testaPilha(new DynamicStack<int>(), 40);
 //    testaFila(new DynamicQueue<int>(), 40);
 //    testaLista(new LinkedList<int>(), true);
-//    testaLista(new OrderedList<int>(), false);
+    testaLista(new OrderedList<int>(compare), false);
+    testaLista(new OrderedList<int>(compare), true);
 //
 //    testaOverflow();
 //    testaUnderflow();
 
-    testaUsoSatanico();
+//    testaUsoSatanico();
 
     return 0;
 }
