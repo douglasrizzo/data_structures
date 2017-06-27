@@ -64,14 +64,14 @@ protected:
 
     //! Insert an element at the end of the list
     //! \param val the value to be inserted
-    virtual void insert(const T &val) {
+    virtual void insert(const T val) {
         ProtectedLinkedList::insert(val, size);
     }
 
     //! Insert an element at the specified position in the list
     //! \param val the value to be inserted
     //! \param index position of the list that the element will be inserted on
-    virtual void insert(const T &val, const int index) {
+    virtual void insert(const T val, const int index) {
         if (index < 0)
             throw std::out_of_range("Negative index not allowed.");
         if (index > size)
