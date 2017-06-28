@@ -225,8 +225,8 @@ protected:
         return ret;
     }
 
-//! Get the element at the specified position in the list, without removing it
-//! \param index index of the desired element
+    //! Get the element at the specified position in the list, without removing it
+    //! \param index index of the desired element
     virtual T get(const int index) {
         if (index < 0)
             throw std::out_of_range("Negative index not allowed.");
