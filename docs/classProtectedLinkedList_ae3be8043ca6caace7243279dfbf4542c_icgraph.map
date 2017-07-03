@@ -1,5 +1,5 @@
 <map id="ProtectedLinkedList::getNode" name="ProtectedLinkedList::getNode">
-<area shape="rect" id="node2" href="$classProtectedLinkedList.html#a88a61a6e3b3f3f108ead1b8086f841a3" title="Insert an element at the specified position in the list. " alt="" coords="203,5,341,47"/>
-<area shape="rect" id="node3" href="$classProtectedLinkedList.html#a87b0381dac498114329cc0ebbf7433dc" title="Remove an element from the list. " alt="" coords="203,71,341,112"/>
-<area shape="rect" id="node4" href="$classProtectedLinkedList.html#a93c97821e8c139b44c9bd4ba9f5946c4" title="Get the element at the specified position in the list, without removing it. " alt="" coords="191,137,353,163"/>
+<area shape="rect" id="node2" href="$classProtectedLinkedList.html#a88a61a6e3b3f3f108ead1b8086f841a3" title="ProtectedLinkedList\l::insert" alt="" coords="203,5,341,47"/>
+<area shape="rect" id="node3" href="$classProtectedLinkedList.html#a87b0381dac498114329cc0ebbf7433dc" title="ProtectedLinkedList\l::remove" alt="" coords="203,71,341,112"/>
+<area shape="rect" id="node4" href="$classProtectedLinkedList.html#a93c97821e8c139b44c9bd4ba9f5946c4" title="ProtectedLinkedList::get" alt="" coords="191,137,353,163"/>
 </map>

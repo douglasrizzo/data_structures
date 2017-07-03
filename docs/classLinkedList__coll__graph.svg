@@ -26,7 +26,7 @@
 </g>
 <!-- Node5 -->
 <g id="node2" class="node"><title>Node5</title>
-<g id="a_node2"><a xlink:href="classProtectedLinkedList.html" target="_top" xlink:title="Doubly&#45;linked list implementation with dynamic memory allocation. ">
+<g id="a_node2"><a xlink:href="classProtectedLinkedList.html" target="_top" xlink:title="{ProtectedLinkedList\&lt; T \&gt;\n||+ getName()\l+ ProtectedLinkedList()\l+ ~ProtectedLinkedList()\l+ getSize()\l+ isEmpty()\l+ isFull()\l# getNode()\l# ProtectedLinkedList()\l# getFirst()\l# getLast()\l# insert()\l# insert()\l# remove()\l# get()\l# iterator()\l}">
 <polygon fill="none" stroke="black" points="67,-172.5 67,-383.5 194,-383.5 194,-172.5 67,-172.5"/>
 <text text-anchor="middle" x="130.5" y="-371.5" font-family="Helvetica,sans-Serif" font-size="10.00">ProtectedLinkedList&lt; T &gt;</text>
 <polyline fill="none" stroke="black" points="67,-364.5 194,-364.5 "/>

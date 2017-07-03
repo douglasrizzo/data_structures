@@ -16,7 +16,7 @@
 </g>
 <!-- Node17 -->
 <g id="node2" class="node"><title>Node17</title>
-<g id="a_node2"><a xlink:href="classProtectedLinkedList.html#a88a61a6e3b3f3f108ead1b8086f841a3" target="_top" xlink:title="Insert an element at the specified position in the list. ">
+<g id="a_node2"><a xlink:href="classProtectedLinkedList.html#a88a61a6e3b3f3f108ead1b8086f841a3" target="_top" xlink:title="ProtectedLinkedList\l::insert">
 <polygon fill="none" stroke="black" points="148.5,-88 148.5,-118 251.5,-118 251.5,-88 148.5,-88"/>
 <text text-anchor="start" x="156.5" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">ProtectedLinkedList</text>
 <text text-anchor="middle" x="200" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00">::insert</text>
@@ -30,7 +30,7 @@
 </g>
 <!-- Node18 -->
 <g id="node3" class="node"><title>Node18</title>
-<g id="a_node3"><a xlink:href="classProtectedLinkedList.html#a87b0381dac498114329cc0ebbf7433dc" target="_top" xlink:title="Remove an element from the list. ">
+<g id="a_node3"><a xlink:href="classProtectedLinkedList.html#a87b0381dac498114329cc0ebbf7433dc" target="_top" xlink:title="ProtectedLinkedList\l::remove">
 <polygon fill="none" stroke="black" points="148.5,-39 148.5,-69 251.5,-69 251.5,-39 148.5,-39"/>
 <text text-anchor="start" x="156.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">ProtectedLinkedList</text>
 <text text-anchor="middle" x="200" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00">::remove</text>
@@ -44,7 +44,7 @@
 </g>
 <!-- Node19 -->
 <g id="node4" class="node"><title>Node19</title>
-<g id="a_node4"><a xlink:href="classProtectedLinkedList.html#a93c97821e8c139b44c9bd4ba9f5946c4" target="_top" xlink:title="Get the element at the specified position in the list, without removing it. ">
+<g id="a_node4"><a xlink:href="classProtectedLinkedList.html#a93c97821e8c139b44c9bd4ba9f5946c4" target="_top" xlink:title="ProtectedLinkedList::get">
 <polygon fill="none" stroke="black" points="139,-0.5 139,-19.5 261,-19.5 261,-0.5 139,-0.5"/>
 <text text-anchor="middle" x="200" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ProtectedLinkedList::get</text>
 </a>

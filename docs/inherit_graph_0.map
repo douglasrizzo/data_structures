@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node1" href="$classDataStructure.html" title="Base class for all data structures. " alt="" coords="5,107,108,133"/>
-<area shape="rect" id="node2" href="$classProtectedLinkedList.html" title="Doubly&#45;linked list implementation with dynamic memory allocation. " alt="" coords="156,107,325,133"/>
+<area shape="rect" id="node2" href="$classProtectedLinkedList.html" title="ProtectedLinkedList\&lt; T \&gt;" alt="" coords="156,107,325,133"/>
 <area shape="rect" id="node7" href="$classQueue.html" title="Abstract queue interface. " alt="" coords="195,56,287,83"/>
 <area shape="rect" id="node9" href="$classStack.html" title="Abstract stack interface. " alt="" coords="197,157,285,184"/>
 <area shape="rect" id="node3" href="$classDynamicQueue.html" title="Queue implementation with dynamic memory allocation. " alt="" coords="373,56,517,83"/>
