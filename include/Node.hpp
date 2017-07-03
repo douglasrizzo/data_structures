@@ -13,44 +13,44 @@
 //! \tparam T the type of object the node will store.
 template<class T>
 class Node {
-private:
-    T value;
-    Node *next;
-    Node *previous;
-public:
+ private:
+  T value;
+  Node *next;
+  Node *previous;
+ public:
 
-    Node() {
-        next = previous = NULL;
-    }
+  Node() {
+    next = previous = NULL;
+  }
 
-    ~Node() {
+  ~Node() {
 //        delete next;
 //        delete previous;
-    }
+  }
 
-    T getValue() const {
-        return value;
-    }
+  T getValue() const {
+    return value;
+  }
 
-    void setValue(T value) {
-        this->value = value;
-    }
+  void setValue(T value) {
+    this->value = value;
+  }
 
-    Node *getNext() const {
-        return next;
-    }
+  Node *getNext() const {
+    return next;
+  }
 
-    void setNext(Node *next) {
-        this->next = next;
-    }
+  void setNext(Node *next) {
+    this->next = next;
+  }
 
-    Node *getPrevious() const {
-        return previous;
-    }
+  Node *getPrevious() const {
+    return previous;
+  }
 
-    void setPrevious(Node *previous) {
-        this->previous = previous;
-    }
+  void setPrevious(Node *previous) {
+    this->previous = previous;
+  }
 };
 
 #endif

@@ -15,65 +15,65 @@
 //! \tparam T The type of object the data structure will contain
 template<class T>
 class StaticQueue : public Queue<T> {
-private:
-    int size, head, tail, count;
-    T *data;
+ private:
+  int size, head, tail, count;
+  T *data;
 
-public:
-    std::string getName() { return "Static Queue"; }
+ public:
+  std::string getName() { return "Static Queue"; }
 
-    //! Create a fixed-size queue
-    //! \param size the size of the queue
-    explicit StaticQueue(int size) {
-        head = tail = count = 0;
-        this->size = size;
-        data = new T[size];
+  //! Create a fixed-size queue
+  //! \param size the size of the queue
+  explicit StaticQueue(int size) {
+    head = tail = count = 0;
+    this->size = size;
+    data = new T[size];
+  }
+
+  //! create the structure and populate it with the data from the array
+  //! \param data an array with data with which the structure will be initialized
+  explicit StaticQueue(T data[]) {
+    this->data = data;
+
+    size = count = (sizeof(data)/sizeof(data[0])) + 1;
+    head = 0;
+    tail = (sizeof(data)/sizeof(data[0]));
+  }
+
+  ~StaticQueue() { delete[] data; }
+
+  void enqueue(T val) {
+    if (isFull()) {
+      throw std::out_of_range("The queue is full.");
     }
 
-    //! create the structure and populate it with the data from the array
-    //! \param data an array with data with which the structure will be initialized
-    explicit StaticQueue(T data[]) {
-        this->data = data;
+    data[tail] = val;
+    count++;
+    tail = (tail + 1)%size;
+  }
 
-        size = count = (sizeof(data) / sizeof(data[0])) + 1;
-        head = 0;
-        tail = (sizeof(data) / sizeof(data[0]));
-    }
+  T dequeue() {
+    if (isEmpty())
+      throw std::out_of_range("The queue is empty.");
 
-    ~StaticQueue() { delete[] data; }
+    T tmp = data[head];
+    count--;
+    head = (head + 1)%size;
 
-    void enqueue(T val) {
-        if (isFull()) {
-            throw std::out_of_range("The queue is full.");
-        }
+    return tmp;
+  }
 
-        data[tail] = val;
-        count++;
-        tail = (tail + 1) % size;
-    }
+  T peek() {
+    if (isEmpty())
+      throw std::out_of_range("The queue is empty.");
+    return data[head];
+  }
 
-    T dequeue() {
-        if (isEmpty())
-            throw std::out_of_range("The queue is empty.");
+  int getSize() { return count; }
 
-        T tmp = data[head];
-        count--;
-        head = (head + 1) % size;
+  bool isEmpty() { return count==0; }
 
-        return tmp;
-    }
-
-    T peek() {
-        if (isEmpty())
-            throw std::out_of_range("The queue is empty.");
-        return data[head];
-    }
-
-    int getSize() { return count; }
-
-    bool isEmpty() { return count == 0; }
-
-    bool isFull() { return count == size; }
+  bool isFull() { return count==size; }
 };
 
 #endif

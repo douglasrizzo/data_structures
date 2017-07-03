@@ -14,21 +14,21 @@
 //! \tparam T The type of object the data structure will contain
 template<class T>
 class Queue : public DataStructure {
-public:
+ public:
 
-    std::string getName() { return "Queue Interface"; }
+  std::string getName() { return "Queue Interface"; }
 
-    //! Add an element to the end of the queue
-    //! \param val the value to be added to the queue
-    virtual void enqueue(T val) =0;
+  //! Add an element to the end of the queue
+  //! \param val the value to be added to the queue
+  virtual void enqueue(T val) =0;
 
-    //! Remove an element from the queue
-    //! \return the value that is being removed
-    virtual T dequeue()=0;
+  //! Remove an element from the queue
+  //! \return the value that is being removed
+  virtual T dequeue()=0;
 
-    //! See the first value from the queue, without removing it
-    //! \return The first value on the queue
-    virtual T peek() =0;
+  //! See the first value from the queue, without removing it
+  //! \return The first value on the queue
+  virtual T peek() =0;
 };
 
 #endif

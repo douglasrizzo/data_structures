@@ -14,21 +14,21 @@
 //! \tparam T The type of object the data structure will contain
 template<class T>
 class Stack : public DataStructure {
-public:
+ public:
 
-    std::string getName() { return "Stack Interface"; }
+  std::string getName() { return "Stack Interface"; }
 
-    //! Add an element to the top of the stack
-    //! \param val the value to be added to the stack
-    virtual void push(T val) =0;
+  //! Add an element to the top of the stack
+  //! \param val the value to be added to the stack
+  virtual void push(T val) =0;
 
-    //! Remove an element from the top of the stack
-    //! \return the value that is being removed
-    virtual T pop() =0;
+  //! Remove an element from the top of the stack
+  //! \return the value that is being removed
+  virtual T pop() =0;
 
-    //! See the value from the top of the stack, without removing it
-    //! \return The value on the top of the stack
-    virtual T peek() =0;
+  //! See the value from the top of the stack, without removing it
+  //! \return The value on the top of the stack
+  virtual T peek() =0;
 };
 
 #endif
