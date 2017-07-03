@@ -14,249 +14,257 @@
 
 using namespace std;
 
-//! This object provides iterative powers to classes that have Node as their underlying data storage objects.
-//! \tparam T The type of object the Node inside the Iterator will hold.
+// ! This object provides iterative powers to classes that have Node as their
+// underlying data storage objects.
+// ! \tparam T The type of object the Node inside the Iterator will hold.
 template<class T>
 class Iterator {
-private:
-    Node<T> *node;
-    bool firstRun = true;
-public:
+ private:
 
-    //! Creates an iterator.
-    //! \param n The starting node for the iteration
-    explicit Iterator(Node<T> *n) {
-        node = n;
+  Node<T> *node;
+  bool firstRun = true;
+
+ public:
+
+  // ! Creates an iterator.
+  // ! \param n The starting node for the iteration
+  explicit Iterator(Node<T> *n) {
+    node = n;
+  }
+
+  // ! Returns whether the iterator has a next value to explore.
+  // ! \return True if there is a next value, otherwise false
+  bool hasNext() {
+    return firstRun and node!=NULL or node->getNext()!=NULL;
+  }
+
+  // ! Returns whether the iterator has a previous value to explore.
+  // ! \return True if there is a previous value, otherwise false
+  bool hasPrevious() {
+    return node->getPrevious()!=NULL;
+  }
+
+  // ! Go to the next value.
+  // ! \return The next value in the iteration
+  T next() {
+    if (firstRun) {
+      firstRun = !firstRun;
+      return node->getValue();
     }
 
-    //! Returns whether the iterator has a next value to explore.
-    //! \return True if there is a next value, otherwise false
-    bool hasNext() {
-        return firstRun and node != NULL or node->getNext() != NULL;
-    }
+    node = node->getNext();
+    return node->getValue();
+  }
 
-    //! Returns whether the iterator has a previous value to explore.
-    //! \return True if there is a previous value, otherwise false
-    bool hasPrevious() {
-        return node->getPrevious() != NULL;
-    }
+  // ! Go to the previous value.
+  // ! \return The previous value in the iteration
+  T previous() {
+    node = node->getNext();
+    return node->getValue();
+  }
 
-    //! Go to the next value.
-    //! \return The next value in the iteration
-    T next() {
-        if (firstRun) {
-            firstRun = !firstRun;
-            return node->getValue();
-        }
-
-        node = node->getNext();
-        return node->getValue();
-    }
-
-    //! Go to the previous value.
-    //! \return The previous value in the iteration
-    T previous() {
-        node = node->getNext();
-        return node->getValue();
-    }
-
-    //! Get the current value the iterator holds.
-    //! \return The current value in the iteration
-    T current() {
-        return node->getValue();
-    }
+  // ! Get the current value the iterator holds.
+  // ! \return The current value in the iteration
+  T current() {
+    return node->getValue();
+  }
 };
 
-//! Doubly-linked list implementation with dynamic memory allocation.
-//! Many methods in this class are protected so the class can be used as an extension for other data structures.
-//! \tparam T The type of object the data structure will contain
+// ! Doubly-linked list implementation with dynamic memory allocation.
+// ! Many methods in this class are protected so the class can be used as an
+// extension for other data structures.
+// ! \tparam T The type of object the data structure will contain
 template<class T>
 class ProtectedLinkedList : public DataStructure {
-private:
-    Node<T> *first;
-    Node<T> *last;
-    int size = 0;
+ private:
 
-public:
-    string getName() { return "Protected Linked List"; }
+  Node<T> *first;
+  Node<T> *last;
+  int size = 0;
 
-    ProtectedLinkedList() {
-        first = last = NULL;
+ public:
+
+  string getName() {
+    return "Protected Linked List";
+  }
+
+  ProtectedLinkedList() {
+    first = last = NULL;
+  }
+
+  ~ProtectedLinkedList() {
+    Node<T> *tmp;
+
+    while (first!=NULL) {
+      tmp = first;
+      first = first->getNext();
+      delete tmp;
+    }
+    last = NULL;
+    size = 0;
+  }
+
+ protected:
+
+  Node<T> *getNode(int index) {
+    Node<T> *tmp;
+
+    if (index <= size - index) {
+      tmp = first;
+
+      for (int i = 0; i < index; i++)
+//        for (int i = 0; i < index - 1; i++)
+        tmp = tmp->getNext();
+    } else {
+      tmp = last;
+
+      for (int i = size - 1; i > index; i--)
+        tmp = tmp->getPrevious();
+    }
+    return tmp;
+  }
+
+  // ! create the structure and populate it with the data from the array
+  // ! \param data an array with data with which the structure will be
+  // initialized
+  explicit ProtectedLinkedList(const T data[]) {
+    for (int i = 0; i <= (sizeof(data)/sizeof(data[0])); i++) {
+      insert(data[i]);
+    }
+  }
+
+  Node<T> *getFirst() const {
+    return first;
+  }
+
+  Node<T> *getLast() const {
+    return last;
+  }
+
+  // ! Insert an element at the end of the list
+  // ! \param val the value to be inserted
+  virtual void insert(const T val) {
+    ProtectedLinkedList::insert(val, size);
+  }
+
+  // ! Insert an element at the specified position in the list
+  // ! \param val the value to be inserted
+  // ! \param index position of the list that the element will be inserted on
+  virtual void insert(const T val, const int index) {
+    if (index < 0) throw std::out_of_range("Negative index not allowed.");
+
+    if (index > size) throw std::out_of_range("Nonexistent index.");
+
+    // if it's the first element on the list, create the first node
+    if (size==0) {
+      first = new Node<T>();
+      first->setValue(val);
+
+      // first and last both point to the same node at the beginning
+      last = first;
     }
 
-    ~ProtectedLinkedList() {
-        Node<T> *tmp;
-
-        while (first != NULL) {
-            tmp = first;
-            first = first->getNext();
-            delete tmp;
-        }
-        last = NULL;
-        size = 0;
+      // if the insertion is at the beginning,
+      // use the pointer to the first node to
+      // speed things up and replace first too
+    else if (index==0) {
+      Node<T> *tmp = new Node<T>();
+      tmp->setValue(val);
+      tmp->setNext(first);
+      first->setPrevious(tmp);
+      first = tmp;
     }
 
-protected:
-    Node<T> *getNode(int index) {
-        Node<T> *tmp;
-        if (index <= size - index) {
-            tmp = first;
-
-            for (int i = 0; i < index - 1; i++)
-                tmp = tmp->getNext();
-        }
-        else {
-            tmp = last;
-
-            for (int i = size - 1; i > index; i--)
-                tmp = tmp->getPrevious();
-        }
-        return tmp;
+      // the same applies when an insertion is made in the last node
+      // this is useful for the stack and queue implementations
+    else if (index==size) {
+      last->setNext(new Node<T>());
+      last->getNext()->setValue(val);
+      last->getNext()->setPrevious(last);
+      last = last->getNext();
     }
 
-//! create the structure and populate it with the data from the array
-//! \param data an array with data with which the structure will be initialized
-    explicit ProtectedLinkedList(const T data[]) {
-        for (int i = 0; i <= (sizeof(data) / sizeof(data[0])); i++) {
-            insert(data[i]);
-        }
+      // if the index is in the middle of the list, it must be traversed
+    else {
+      Node<T> *tmp = getNode(index);
+
+      // a new node is created and put between
+      // the current node and the next one
+      Node<T> *tmp2 = new Node<T>();
+      tmp2->setValue(val);
+      tmp2->setNext(tmp->getNext());
+      tmp2->setPrevious(tmp);
+
+      if (tmp->getNext()!=NULL) tmp->getNext()->setPrevious(tmp2);
+
+      tmp->setNext(tmp2);
     }
+    size++;
+  }
 
-    Node<T> *getFirst() const {
-        return first;
-    }
+  // ! Remove an element from the list
+  // ! \param index position of the element to be removed
+  // ! \return the element that is being removed
+  virtual T remove(const int index) {
+    if (index < 0) throw std::out_of_range("Negative index not allowed.");
 
-    Node<T> *getLast() const {
-        return last;
-    }
+    if (index >= size) throw std::out_of_range("Nonexistent index in list.");
 
-//! Insert an element at the end of the list
-//! \param val the value to be inserted
-    virtual void insert(const T val) {
-        ProtectedLinkedList::insert(val, size);
-    }
+    Node<T> *tmp = getNode(index);
 
-//! Insert an element at the specified position in the list
-//! \param val the value to be inserted
-//! \param index position of the list that the element will be inserted on
-    virtual void insert(const T val, const int index) {
-        if (index < 0)
-            throw std::out_of_range("Negative index not allowed.");
-        if (index > size)
-            throw std::out_of_range("Nonexistent index.");
+    T ret = tmp->getValue();
 
-        // if it's the first element on the list, create the first node
-        if (size == 0) {
-            first = new Node<T>();
-            first->setValue(val);
+    if (tmp->getPrevious()!=NULL)
+      tmp->getPrevious()->setNext(tmp->getNext());
+    else
+      first = tmp->getNext();
 
-            // first and last both point to the same node at the beginning
-            last = first;
-        }
-            // if the insertion is at the beginning,
-            // use the pointer to the first node to
-            // speed things up and replace first too
-        else if (index == 0) {
-            Node<T> *tmp = new Node<T>();
-            tmp->setValue(val);
-            tmp->setNext(first);
-            first->setPrevious(tmp);
-            first = tmp;
-        }
-            // the same applies when an insertion is made in the last node
-            // this is useful for the stack and queue implementations
-        else if (index == size) {
-            last->setNext(new Node<T>());
-            last->getNext()->setValue(val);
-            last->getNext()->setPrevious(last);
-            last = last->getNext();
-        }
-            // if the index is in the middle of the list, it must be traversed
-        else {
-            Node<T> *tmp = getNode(index);
+    if (tmp->getNext()!=NULL)
+      tmp->getNext()->setPrevious(tmp->getPrevious());
+    else
+      last = tmp->getPrevious();
 
-            // a new node is created and put between
-            // the current node and the next one
-            Node<T> *tmp2 = new Node<T>();
-            tmp2->setValue(val);
-            tmp2->setNext(tmp->getNext());
-            tmp2->setPrevious(tmp);
+    size--;
 
-            if (tmp->getNext() != NULL)
-                tmp->getNext()->setPrevious(tmp2);
+    tmp->setNext(NULL);
+    tmp->setPrevious(NULL);
+    delete tmp;
 
-            tmp->setNext(tmp2);
-        }
-        size++;
-    }
+    return ret;
+  }
 
-//! Remove an element from the list
-//! \param index position of the element to be removed
-//! \return the element that is being removed
-    virtual T remove(const int index) {
-        if (index < 0)
-            throw std::out_of_range("Negative index not allowed.");
-        if (index >= size)
-            throw std::out_of_range("Nonexistent index in list.");
+  // ! Get the element at the specified position in the list, without removing
+  // it
+  // ! \param index index of the desired element
+  virtual T get(const int index) {
+    if (index < 0) throw std::out_of_range("Negative index not allowed.");
 
-        Node<T> *tmp = getNode(index);
+    if (index > size) throw std::out_of_range("Nonexistent index.");
 
-        T ret = tmp->getValue();
+    Node<T> *tmp = getNode(index);
+    return tmp->getValue();
+  }
 
-        if (tmp->getPrevious() != NULL) {
-            tmp->getPrevious()->setNext(tmp->getNext());
-        }
-        else {
-            first = tmp->getNext();
-        }
+  // ! Creates an Iterator, an object that allows the sequential
+  // ! access of values in a Linked List without the search overhead
+  // ! \return an Iterator starting from the first node of the list
+  virtual Iterator<T> iterator() {
+    return Iterator<T>(first);
+  }
 
-        if (tmp->getNext() != NULL) {
-            tmp->getNext()->setPrevious(tmp->getPrevious());
-        }
-        else {
-            last = tmp->getPrevious();
-        }
-        size--;
+ public:
 
-        tmp->setNext(NULL);
-        tmp->setPrevious(NULL);
-        delete tmp;
+  int getSize() {
+    return size;
+  }
 
-        return ret;
-    }
+  bool isEmpty() {
+    return size==0;
+  }
 
-    //! Get the element at the specified position in the list, without removing it
-    //! \param index index of the desired element
-    virtual T get(const int index) {
-        if (index < 0)
-            throw std::out_of_range("Negative index not allowed.");
-        if (index > size)
-            throw std::out_of_range("Nonexistent index.");
-
-        Node<T> *tmp = getNode(index);
-        return tmp->getValue();
-    }
-
-    //! Creates an Iterator, an object that allows the sequential
-    //! access of values in a Linked List without the search overhead
-    //! \return an Iterator starting from the first node of the list
-    virtual Iterator<T> iterator() {
-        return Iterator<T>(first);
-    }
-
-public:
-
-    int getSize() {
-        return size;
-    }
-
-    bool isEmpty() {
-        return size == 0;
-    }
-
-    bool isFull() {
-        return false;
-    }
+  bool isFull() {
+    return false;
+  }
 };
 
-#endif
+#endif // ifndef AULA1_PROTECTEDLINKEDLIST_HPP
