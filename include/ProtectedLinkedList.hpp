@@ -109,16 +109,15 @@ class ProtectedLinkedList : public DataStructure {
   Node<T> *getNode(int index) {
     Node<T> *tmp;
 
-    if (index <= size - index) {
+    if (index <= size/2) {
       tmp = first;
 
       for (int i = 0; i < index; i++)
-//        for (int i = 0; i < index - 1; i++)
         tmp = tmp->getNext();
     } else {
       tmp = last;
 
-      for (int i = size - 1; i > index; i--)
+      for (int i = 0; i < size - index; i++)
         tmp = tmp->getPrevious();
     }
     return tmp;
