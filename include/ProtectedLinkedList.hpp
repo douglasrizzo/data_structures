@@ -14,66 +14,9 @@
 
 using namespace std;
 
-// ! This object provides iterative powers to classes that have Node as their
-// underlying data storage objects.
-// ! \tparam T The type of object the Node inside the Iterator will hold.
-template<class T>
-class Iterator {
- private:
-
-  Node<T> *node;
-  bool firstRun = true;
-
- public:
-
-  // ! Creates an iterator.
-  // ! \param n The starting node for the iteration
-  explicit Iterator(Node<T> *n) {
-    node = n;
-  }
-
-  // ! Returns whether the iterator has a next value to explore.
-  // ! \return True if there is a next value, otherwise false
-  bool hasNext() {
-    return firstRun and node != NULL or node->getNext() != NULL;
-  }
-
-  // ! Returns whether the iterator has a previous value to explore.
-  // ! \return True if there is a previous value, otherwise false
-  bool hasPrevious() {
-    return node->getPrevious() != NULL;
-  }
-
-  // ! Go to the next value.
-  // ! \return The next value in the iteration
-  T next() {
-    if (firstRun) {
-      firstRun = ! firstRun;
-      return node->getValue();
-    }
-
-    node = node->getNext();
-    return node->getValue();
-  }
-
-  // ! Go to the previous value.
-  // ! \return The previous value in the iteration
-  T previous() {
-    node = node->getNext();
-    return node->getValue();
-  }
-
-  // ! Get the current value the iterator holds.
-  // ! \return The current value in the iteration
-  T current() {
-    return node->getValue();
-  }
-};
-
-// ! Doubly-linked list implementation with dynamic memory allocation.
-// ! Many methods in this class are protected so the class can be used as an
-// extension for other data structures.
-// ! \tparam T The type of object the data structure will contain
+//! Doubly-linked list implementation with dynamic memory allocation.
+//! Many methods in this class are protected so the class can be used as an extension for other data structures.
+//! \tparam T The type of object the data structure will contain
 template<class T>
 class ProtectedLinkedList : public DataStructure {
  private:
@@ -123,8 +66,8 @@ class ProtectedLinkedList : public DataStructure {
     return tmp;
   }
 
-  // ! create the structure and populate it with the data from the array
-  // ! \param data an array with data with which the structure will be
+  //! create the structure and populate it with the data from the array
+  //! \param data an array with data with which the structure will be
   // initialized
   explicit ProtectedLinkedList(const T data[]) {
     for (int i = 0; i <= (sizeof(data) / sizeof(data[0])); i ++) {
@@ -140,15 +83,15 @@ class ProtectedLinkedList : public DataStructure {
     return last;
   }
 
-  // ! Insert an element at the end of the list
-  // ! \param val the value to be inserted
+  //! Insert an element at the end of the list
+  //! \param val the value to be inserted
   virtual void insert(const T val) {
     ProtectedLinkedList::insert(val, size);
   }
 
-  // ! Insert an element at the specified position in the list
-  // ! \param val the value to be inserted
-  // ! \param index position of the list that the element will be inserted on
+  //! Insert an element at the specified position in the list
+  //! \param val the value to be inserted
+  //! \param index position of the list that the element will be inserted on
   virtual void insert(const T val, const int index) {
     if (index < 0) throw std::out_of_range("Negative index not allowed.");
 
@@ -201,9 +144,9 @@ class ProtectedLinkedList : public DataStructure {
     size ++;
   }
 
-  // ! Remove an element from the list
-  // ! \param index position of the element to be removed
-  // ! \return the element that is being removed
+  //! Remove an element from the list
+  //! \param index position of the element to be removed
+  //! \return the element that is being removed
   virtual T remove(const int index) {
     if (index < 0) throw std::out_of_range("Negative index not allowed.");
 
@@ -232,9 +175,9 @@ class ProtectedLinkedList : public DataStructure {
     return ret;
   }
 
-  // ! Get the element at the specified position in the list, without removing
+  //! Get the element at the specified position in the list, without removing
   // it
-  // ! \param index index of the desired element
+  //! \param index index of the desired element
   virtual T get(const int index) {
     if (index < 0) throw std::out_of_range("Negative index not allowed.");
 
@@ -244,10 +187,10 @@ class ProtectedLinkedList : public DataStructure {
     return tmp->getValue();
   }
 
-  // ! Creates an Iterator, an object that allows the sequential
-  // ! access of values in a Linked List without the search overhead
-  // ! \return an Iterator starting from the first node of the list
-  virtual Iterator<T> iterator() {
+  //! Creates an Iterator, an object that allows the sequential
+  //! access of values in a Linked List without the search overhead
+  //! \return an Iterator starting from the first node of the list
+  virtual Iterator <T> iterator() {
     return Iterator<T>(first);
   }
 

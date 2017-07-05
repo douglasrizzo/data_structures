@@ -1,3 +1,4 @@
 <map id="DynamicStack::peek" name="DynamicStack::peek">
-<area shape="rect" id="node2" href="$classDynamicStack.html#a15be45eff5b9d214cc39e539d0bb0bf8" title="Outputs the number of elements stored in the structure. " alt="" coords="197,5,357,32"/>
+<area shape="rect" id="node2" href="$classProtectedLinkedList.html#a264e204dcc5d4aee73e8c67ae4b2b1fa" title="Check whether the structure is full. " alt="" coords="405,5,543,47"/>
+<area shape="rect" id="node3" href="$classDynamicStack.html#a15be45eff5b9d214cc39e539d0bb0bf8" title="Outputs the number of elements stored in the structure. " alt="" coords="197,38,357,65"/>
 </map>

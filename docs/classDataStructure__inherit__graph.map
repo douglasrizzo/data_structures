@@ -1,5 +1,5 @@
 <map id="DataStructure" name="DataStructure">
-<area shape="rect" id="node2" href="$classProtectedLinkedList.html" title="{ProtectedLinkedList\&lt; T \&gt;\n|&#45; first\l&#45; last\l&#45; size\l|+ getName()\l+ ProtectedLinkedList()\l+ ~ProtectedLinkedList()\l+ getSize()\l+ isEmpty()\l+ isFull()\l# getNode()\l# ProtectedLinkedList()\l# getFirst()\l# getLast()\l# insert()\l# insert()\l# remove()\l# get()\l# iterator()\l}" alt="" coords="297,175,467,487"/>
+<area shape="rect" id="node2" href="$classProtectedLinkedList.html" title="Doubly&#45;linked list implementation with dynamic memory allocation. " alt="" coords="297,175,467,487"/>
 <area shape="rect" id="node7" href="$classQueue.html" title="Abstract queue interface. " alt="" coords="179,270,273,391"/>
 <area shape="rect" id="node9" href="$classStack.html" title="Abstract stack interface. " alt="" coords="491,270,585,391"/>
 <area shape="rect" id="node3" href="$classDynamicQueue.html" title="Queue implementation with dynamic memory allocation. " alt="" coords="157,571,301,766"/>

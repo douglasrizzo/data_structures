@@ -1,0 +1,9 @@
+<map id="LinkedList::iterator" name="LinkedList::iterator">
+<area shape="rect" id="node2" href="$main_8cpp.html#ad449bc12ea39030953553ed521ae297a" title="testaUnderflow" alt="" coords="199,5,309,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ecb3f6b9893ec879ef237538c33314e" title="testaUsoSatanico" alt="" coords="191,56,317,83"/>
+<area shape="rect" id="node4" href="$classOrderedList.html#a630adf103a541785d2ed2954bad3da84" title="Insert an element at its position on the list. " alt="" coords="189,107,319,133"/>
+<area shape="rect" id="node5" href="$classOrderedList.html#ac85cb35a59ea846ff79eebd3743e0b67" title="Finds an element in the ordered list and returns its index. " alt="" coords="183,157,325,184"/>
+<area shape="rect" id="node7" href="$classOrderedList.html#a5351bc375507ce98efac7102e26ac66d" title="Remove an element from the list. " alt="" coords="184,208,324,235"/>
+<area shape="rect" id="node8" href="$classOrderedList.html#aa45cc48c177b9b1325ef724679bc212a" title="Get the element at the specified position in the list, without removing it. " alt="" coords="197,259,311,285"/>
+<area shape="rect" id="node6" href="$classOrderedList.html#a7ae22e189c25baa8748b5bf3de4520f8" title="Answers whether the ordered list contains an enemy. " alt="" coords="373,157,520,184"/>
+</map>

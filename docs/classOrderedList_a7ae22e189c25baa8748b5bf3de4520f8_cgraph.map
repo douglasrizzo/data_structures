@@ -1,3 +1,4 @@
 <map id="OrderedList::contains" name="OrderedList::contains">
-<area shape="rect" id="node2" href="$classOrderedList.html#ac85cb35a59ea846ff79eebd3743e0b67" title="Finds an element in the ordered list and returns its index. " alt="" coords="200,5,343,32"/>
+<area shape="rect" id="node2" href="$classOrderedList.html#ac85cb35a59ea846ff79eebd3743e0b67" title="Finds an element in the ordered list and returns its index. " alt="" coords="200,29,343,56"/>
+<area shape="rect" id="node3" href="$classLinkedList.html#a2704854adf2cfec4aefce769d344aa1a" title="Creates an Iterator, an object that allows the sequential access of values in a Linked List without t..." alt="" coords="391,29,520,56"/>
 </map>

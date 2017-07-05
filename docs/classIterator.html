@@ -66,7 +66,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="ProtectedLinkedList_8hpp_source.html">ProtectedLinkedList.hpp</a>&gt;</code></p>
+<p>Object that provides iterative powers to classes composed of <a class="el" href="classNode.html" title="Node used inside other data structures. ">Node</a>.  
+ <a href="classIterator.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Iterator_8hpp_source.html">Iterator.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Iterator&lt; T &gt;:</div>
 <div class="dyncontent">
@@ -76,16 +79,22 @@ Collaboration diagram for Iterator&lt; T &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aad6be65b3d4c8b1b4bff5957cb9a01f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIterator.html#aad6be65b3d4c8b1b4bff5957cb9a01f5">Iterator</a> (<a class="el" href="classNode.html">Node</a>&lt; T &gt; *n)</td></tr>
+<tr class="memdesc:aad6be65b3d4c8b1b4bff5957cb9a01f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an iterator.  <a href="#aad6be65b3d4c8b1b4bff5957cb9a01f5">More...</a><br /></td></tr>
 <tr class="separator:aad6be65b3d4c8b1b4bff5957cb9a01f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69b4bebf4a915a4ee591e6c8bd9b9b9a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIterator.html#a69b4bebf4a915a4ee591e6c8bd9b9b9a">hasNext</a> ()</td></tr>
+<tr class="memdesc:a69b4bebf4a915a4ee591e6c8bd9b9b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the iterator has a next value to explore.  <a href="#a69b4bebf4a915a4ee591e6c8bd9b9b9a">More...</a><br /></td></tr>
 <tr class="separator:a69b4bebf4a915a4ee591e6c8bd9b9b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35941cbff7f7c39db61c5fc26e6fc04f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIterator.html#a35941cbff7f7c39db61c5fc26e6fc04f">hasPrevious</a> ()</td></tr>
+<tr class="memdesc:a35941cbff7f7c39db61c5fc26e6fc04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the iterator has a previous value to explore.  <a href="#a35941cbff7f7c39db61c5fc26e6fc04f">More...</a><br /></td></tr>
 <tr class="separator:a35941cbff7f7c39db61c5fc26e6fc04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a225a9589039da25c506ba720b6e8ea0b"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIterator.html#a225a9589039da25c506ba720b6e8ea0b">next</a> ()</td></tr>
+<tr class="memdesc:a225a9589039da25c506ba720b6e8ea0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to the next value.  <a href="#a225a9589039da25c506ba720b6e8ea0b">More...</a><br /></td></tr>
 <tr class="separator:a225a9589039da25c506ba720b6e8ea0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a219f0a1ba351ff0eede5960e4222398d"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIterator.html#a219f0a1ba351ff0eede5960e4222398d">previous</a> ()</td></tr>
+<tr class="memdesc:a219f0a1ba351ff0eede5960e4222398d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to the previous value.  <a href="#a219f0a1ba351ff0eede5960e4222398d">More...</a><br /></td></tr>
 <tr class="separator:a219f0a1ba351ff0eede5960e4222398d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b3c374b7383047f3d7d19492876e738"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIterator.html#a0b3c374b7383047f3d7d19492876e738">current</a> ()</td></tr>
+<tr class="memdesc:a0b3c374b7383047f3d7d19492876e738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current value the iterator holds.  <a href="#a0b3c374b7383047f3d7d19492876e738">More...</a><br /></td></tr>
 <tr class="separator:a0b3c374b7383047f3d7d19492876e738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -99,8 +108,17 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><h3>template&lt;class T&gt;<br />
 class Iterator&lt; T &gt;</h3>
 
+<p>Object that provides iterative powers to classes composed of <a class="el" href="classNode.html" title="Node used inside other data structures. ">Node</a>. </p>
+<dl class="section author"><dt>Author</dt><dd>Douglas De Rizzo Meneghetti (<a href="#" onclick="location.href='mai'+'lto:'+'dou'+'gl'+'asr'+'iz'+'zom'+'@g'+'mai'+'l.'+'com'; return false;">dougl<span style="display: none;">.nosp@m.</span>asri<span style="display: none;">.nosp@m.</span>zzom@<span style="display: none;">.nosp@m.</span>gmai<span style="display: none;">.nosp@m.</span>l.com</a>) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2017-7-5This object provides iterative powers to classes that have <a class="el" href="classNode.html" title="Node used inside other data structures. ">Node</a> as their </dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of object the <a class="el" href="classNode.html" title="Node used inside other data structures. ">Node</a> inside the <a class="el" href="classIterator.html" title="Object that provides iterative powers to classes composed of Node. ">Iterator</a> will hold. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="ProtectedLinkedList_8hpp_source.html#l00021">21</a> of file <a class="el" href="ProtectedLinkedList_8hpp_source.html">ProtectedLinkedList.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Iterator_8hpp_source.html#l00014">14</a> of file <a class="el" href="Iterator_8hpp_source.html">Iterator.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aad6be65b3d4c8b1b4bff5957cb9a01f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad6be65b3d4c8b1b4bff5957cb9a01f5">&#9670;&nbsp;</a></span>Iterator()</h2>
@@ -128,8 +146,16 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProtectedLinkedList_8hpp_source.html#l00031">31</a> of file <a class="el" href="ProtectedLinkedList_8hpp_source.html">ProtectedLinkedList.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a> = n;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div><div class="ttc" id="classIterator_html_a320f3c49a89d169b512bf56e0e8c994e"><div class="ttname"><a href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">Iterator::node</a></div><div class="ttdeci">Node&lt; T &gt; * node</div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00024">ProtectedLinkedList.hpp:24</a></div></div>
+<p>Creates an iterator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The starting node for the iteration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Iterator_8hpp_source.html#l00024">24</a> of file <a class="el" href="Iterator_8hpp_source.html">Iterator.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                 {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a> = n;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div><div class="ttc" id="classIterator_html_a320f3c49a89d169b512bf56e0e8c994e"><div class="ttname"><a href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">Iterator::node</a></div><div class="ttdeci">Node&lt; T &gt; * node</div><div class="ttdef"><b>Definition:</b> <a href="Iterator_8hpp_source.html#l00017">Iterator.hpp:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -159,8 +185,11 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProtectedLinkedList_8hpp_source.html#l00068">68</a> of file <a class="el" href="ProtectedLinkedList_8hpp_source.html">ProtectedLinkedList.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;              {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getValue();</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div><div class="ttc" id="classIterator_html_a320f3c49a89d169b512bf56e0e8c994e"><div class="ttname"><a href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">Iterator::node</a></div><div class="ttdeci">Node&lt; T &gt; * node</div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00024">ProtectedLinkedList.hpp:24</a></div></div>
+<p>Get the current value the iterator holds. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current value in the iteration </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Iterator_8hpp_source.html#l00061">61</a> of file <a class="el" href="Iterator_8hpp_source.html">Iterator.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;              {</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getValue();</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div><div class="ttc" id="classIterator_html_a320f3c49a89d169b512bf56e0e8c994e"><div class="ttname"><a href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">Iterator::node</a></div><div class="ttdeci">Node&lt; T &gt; * node</div><div class="ttdef"><b>Definition:</b> <a href="Iterator_8hpp_source.html#l00017">Iterator.hpp:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -189,9 +218,12 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProtectedLinkedList_8hpp_source.html#l00037">37</a> of file <a class="el" href="ProtectedLinkedList_8hpp_source.html">ProtectedLinkedList.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                 {</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classIterator.html#ac2a692160c0c0964806a90b8a674be4e">firstRun</a> and <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a> != NULL or <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getNext() != NULL;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div><div class="ttc" id="classIterator_html_ac2a692160c0c0964806a90b8a674be4e"><div class="ttname"><a href="classIterator.html#ac2a692160c0c0964806a90b8a674be4e">Iterator::firstRun</a></div><div class="ttdeci">bool firstRun</div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00025">ProtectedLinkedList.hpp:25</a></div></div>
-<div class="ttc" id="classIterator_html_a320f3c49a89d169b512bf56e0e8c994e"><div class="ttname"><a href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">Iterator::node</a></div><div class="ttdeci">Node&lt; T &gt; * node</div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00024">ProtectedLinkedList.hpp:24</a></div></div>
+<p>Returns whether the iterator has a next value to explore. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if there is a next value, otherwise false </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Iterator_8hpp_source.html#l00030">30</a> of file <a class="el" href="Iterator_8hpp_source.html">Iterator.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                 {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classIterator.html#ac2a692160c0c0964806a90b8a674be4e">firstRun</a> and <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a> != NULL or <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getNext() != NULL;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div><div class="ttc" id="classIterator_html_ac2a692160c0c0964806a90b8a674be4e"><div class="ttname"><a href="classIterator.html#ac2a692160c0c0964806a90b8a674be4e">Iterator::firstRun</a></div><div class="ttdeci">bool firstRun</div><div class="ttdef"><b>Definition:</b> <a href="Iterator_8hpp_source.html#l00018">Iterator.hpp:18</a></div></div>
+<div class="ttc" id="classIterator_html_a320f3c49a89d169b512bf56e0e8c994e"><div class="ttname"><a href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">Iterator::node</a></div><div class="ttdeci">Node&lt; T &gt; * node</div><div class="ttdef"><b>Definition:</b> <a href="Iterator_8hpp_source.html#l00017">Iterator.hpp:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -220,8 +252,11 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProtectedLinkedList_8hpp_source.html#l00043">43</a> of file <a class="el" href="ProtectedLinkedList_8hpp_source.html">ProtectedLinkedList.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                     {</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getPrevious() != NULL;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div><div class="ttc" id="classIterator_html_a320f3c49a89d169b512bf56e0e8c994e"><div class="ttname"><a href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">Iterator::node</a></div><div class="ttdeci">Node&lt; T &gt; * node</div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00024">ProtectedLinkedList.hpp:24</a></div></div>
+<p>Returns whether the iterator has a previous value to explore. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if there is a previous value, otherwise false </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Iterator_8hpp_source.html#l00036">36</a> of file <a class="el" href="Iterator_8hpp_source.html">Iterator.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                     {</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getPrevious() != NULL;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div><div class="ttc" id="classIterator_html_a320f3c49a89d169b512bf56e0e8c994e"><div class="ttname"><a href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">Iterator::node</a></div><div class="ttdeci">Node&lt; T &gt; * node</div><div class="ttdef"><b>Definition:</b> <a href="Iterator_8hpp_source.html#l00017">Iterator.hpp:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -250,9 +285,12 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProtectedLinkedList_8hpp_source.html#l00049">49</a> of file <a class="el" href="ProtectedLinkedList_8hpp_source.html">ProtectedLinkedList.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;           {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classIterator.html#ac2a692160c0c0964806a90b8a674be4e">firstRun</a>) {</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <a class="code" href="classIterator.html#ac2a692160c0c0964806a90b8a674be4e">firstRun</a> = ! <a class="code" href="classIterator.html#ac2a692160c0c0964806a90b8a674be4e">firstRun</a>;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getValue();</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a> = <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getNext();</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getValue();</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div><div class="ttc" id="classIterator_html_ac2a692160c0c0964806a90b8a674be4e"><div class="ttname"><a href="classIterator.html#ac2a692160c0c0964806a90b8a674be4e">Iterator::firstRun</a></div><div class="ttdeci">bool firstRun</div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00025">ProtectedLinkedList.hpp:25</a></div></div>
-<div class="ttc" id="classIterator_html_a320f3c49a89d169b512bf56e0e8c994e"><div class="ttname"><a href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">Iterator::node</a></div><div class="ttdeci">Node&lt; T &gt; * node</div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00024">ProtectedLinkedList.hpp:24</a></div></div>
+<p>Go to the next value. </p>
+<dl class="section return"><dt>Returns</dt><dd>The next value in the iteration </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Iterator_8hpp_source.html#l00042">42</a> of file <a class="el" href="Iterator_8hpp_source.html">Iterator.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;           {</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classIterator.html#ac2a692160c0c0964806a90b8a674be4e">firstRun</a>) {</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <a class="code" href="classIterator.html#ac2a692160c0c0964806a90b8a674be4e">firstRun</a> = ! <a class="code" href="classIterator.html#ac2a692160c0c0964806a90b8a674be4e">firstRun</a>;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getValue();</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a> = <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getNext();</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getValue();</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div><div class="ttc" id="classIterator_html_ac2a692160c0c0964806a90b8a674be4e"><div class="ttname"><a href="classIterator.html#ac2a692160c0c0964806a90b8a674be4e">Iterator::firstRun</a></div><div class="ttdeci">bool firstRun</div><div class="ttdef"><b>Definition:</b> <a href="Iterator_8hpp_source.html#l00018">Iterator.hpp:18</a></div></div>
+<div class="ttc" id="classIterator_html_a320f3c49a89d169b512bf56e0e8c994e"><div class="ttname"><a href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">Iterator::node</a></div><div class="ttdeci">Node&lt; T &gt; * node</div><div class="ttdef"><b>Definition:</b> <a href="Iterator_8hpp_source.html#l00017">Iterator.hpp:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -281,8 +319,11 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProtectedLinkedList_8hpp_source.html#l00061">61</a> of file <a class="el" href="ProtectedLinkedList_8hpp_source.html">ProtectedLinkedList.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;               {</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a> = <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getNext();</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getValue();</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div><div class="ttc" id="classIterator_html_a320f3c49a89d169b512bf56e0e8c994e"><div class="ttname"><a href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">Iterator::node</a></div><div class="ttdeci">Node&lt; T &gt; * node</div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00024">ProtectedLinkedList.hpp:24</a></div></div>
+<p>Go to the previous value. </p>
+<dl class="section return"><dt>Returns</dt><dd>The previous value in the iteration </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Iterator_8hpp_source.html#l00054">54</a> of file <a class="el" href="Iterator_8hpp_source.html">Iterator.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;               {</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a> = <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getNext();</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">node</a>-&gt;getValue();</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div><div class="ttc" id="classIterator_html_a320f3c49a89d169b512bf56e0e8c994e"><div class="ttname"><a href="classIterator.html#a320f3c49a89d169b512bf56e0e8c994e">Iterator::node</a></div><div class="ttdeci">Node&lt; T &gt; * node</div><div class="ttdef"><b>Definition:</b> <a href="Iterator_8hpp_source.html#l00017">Iterator.hpp:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -309,7 +350,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProtectedLinkedList_8hpp_source.html#l00025">25</a> of file <a class="el" href="ProtectedLinkedList_8hpp_source.html">ProtectedLinkedList.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Iterator_8hpp_source.html#l00018">18</a> of file <a class="el" href="Iterator_8hpp_source.html">Iterator.hpp</a>.</p>
 
 </div>
 </div>
@@ -335,12 +376,12 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProtectedLinkedList_8hpp_source.html#l00024">24</a> of file <a class="el" href="ProtectedLinkedList_8hpp_source.html">ProtectedLinkedList.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Iterator_8hpp_source.html#l00017">17</a> of file <a class="el" href="Iterator_8hpp_source.html">Iterator.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/<a class="el" href="ProtectedLinkedList_8hpp_source.html">ProtectedLinkedList.hpp</a></li>
+<li>include/<a class="el" href="Iterator_8hpp_source.html">Iterator.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
