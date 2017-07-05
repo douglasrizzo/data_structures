@@ -167,20 +167,19 @@ class ProtectedLinkedList : public DataStructure {
       // use the pointer to the first node to
       // speed things up and replace first too
     else if (index==0) {
-      Node<T> *tmp = new Node<T>();
-      tmp->setValue(val);
-      tmp->setNext(first);
-      first->setPrevious(tmp);
-      first = tmp;
+      first->setPrevious(new Node<T>());
+      first->getPrevious()->setNext(first);
+      first = first->getPrevious();
+      first->setValue(val);
     }
 
       // the same applies when an insertion is made in the last node
       // this is useful for the stack and queue implementations
     else if (index==size) {
       last->setNext(new Node<T>());
-      last->getNext()->setValue(val);
       last->getNext()->setPrevious(last);
       last = last->getNext();
+      last->setValue(val);
     }
 
       // if the index is in the middle of the list, it must be traversed
