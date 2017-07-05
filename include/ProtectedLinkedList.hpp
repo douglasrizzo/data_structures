@@ -184,18 +184,19 @@ class ProtectedLinkedList : public DataStructure {
 
       // if the index is in the middle of the list, it must be traversed
     else {
-      Node<T> *tmp = getNode(index);
+      Node<T> *next = getNode(index);
+      Node<T> *previous = next->getPrevious();
 
       // a new node is created and put between
       // the current node and the next one
-      Node<T> *tmp2 = new Node<T>();
-      tmp2->setValue(val);
-      tmp2->setNext(tmp->getNext());
-      tmp2->setPrevious(tmp);
+      Node<T> *middle = new Node<T>();
+      middle->setValue(val);
 
-      if (tmp->getNext()!=NULL) tmp->getNext()->setPrevious(tmp2);
+      middle->setNext(next);
+      next->setPrevious(middle);
 
-      tmp->setNext(tmp2);
+      middle->setPrevious(previous);
+      previous->setNext(middle);
     }
     size++;
   }
