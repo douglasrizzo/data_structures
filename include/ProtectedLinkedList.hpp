@@ -35,20 +35,20 @@ class Iterator {
   // ! Returns whether the iterator has a next value to explore.
   // ! \return True if there is a next value, otherwise false
   bool hasNext() {
-    return firstRun and node!=NULL or node->getNext()!=NULL;
+    return firstRun and node != NULL or node->getNext() != NULL;
   }
 
   // ! Returns whether the iterator has a previous value to explore.
   // ! \return True if there is a previous value, otherwise false
   bool hasPrevious() {
-    return node->getPrevious()!=NULL;
+    return node->getPrevious() != NULL;
   }
 
   // ! Go to the next value.
   // ! \return The next value in the iteration
   T next() {
     if (firstRun) {
-      firstRun = !firstRun;
+      firstRun = ! firstRun;
       return node->getValue();
     }
 
@@ -94,7 +94,7 @@ class ProtectedLinkedList : public DataStructure {
 
   ~ProtectedLinkedList() {
 
-    while (first!=NULL) {
+    while (first != NULL) {
       Node<T> *tmp = first;
       first = first->getNext();
       delete tmp;
@@ -108,15 +108,16 @@ class ProtectedLinkedList : public DataStructure {
   Node<T> *getNode(int index) {
     Node<T> *tmp;
 
-    if (index <= size/2) {
+    if (index <= size / 2) {
       tmp = first;
 
-      for (int i = 0; i < index; i++)
+      for (int i = 0; i < index; i ++)
         tmp = tmp->getNext();
-    } else {
+    }
+    else {
       tmp = last;
 
-      for (int i = 0; i < size - index; i++)
+      for (int i = 0; i < size - index; i ++)
         tmp = tmp->getPrevious();
     }
     return tmp;
@@ -126,7 +127,7 @@ class ProtectedLinkedList : public DataStructure {
   // ! \param data an array with data with which the structure will be
   // initialized
   explicit ProtectedLinkedList(const T data[]) {
-    for (int i = 0; i <= (sizeof(data)/sizeof(data[0])); i++) {
+    for (int i = 0; i <= (sizeof(data) / sizeof(data[0])); i ++) {
       insert(data[i]);
     }
   }
@@ -154,7 +155,7 @@ class ProtectedLinkedList : public DataStructure {
     if (index > size) throw std::out_of_range("Nonexistent index.");
 
     // if it's the first element on the list, create the first node
-    if (size==0) {
+    if (size == 0) {
       first = new Node<T>();
       first->setValue(val);
 
@@ -165,7 +166,7 @@ class ProtectedLinkedList : public DataStructure {
       // if the insertion is at the beginning,
       // use the pointer to the first node to
       // speed things up and replace first too
-    else if (index==0) {
+    else if (index == 0) {
       first->setPrevious(new Node<T>());
       first->getPrevious()->setNext(first);
       first = first->getPrevious();
@@ -174,7 +175,7 @@ class ProtectedLinkedList : public DataStructure {
 
       // the same applies when an insertion is made in the last node
       // this is useful for the stack and queue implementations
-    else if (index==size) {
+    else if (index == size) {
       last->setNext(new Node<T>());
       last->getNext()->setPrevious(last);
       last = last->getNext();
@@ -197,7 +198,7 @@ class ProtectedLinkedList : public DataStructure {
       middle->setPrevious(previous);
       previous->setNext(middle);
     }
-    size++;
+    size ++;
   }
 
   // ! Remove an element from the list
@@ -212,17 +213,17 @@ class ProtectedLinkedList : public DataStructure {
 
     T ret = tmp->getValue();
 
-    if (tmp->getPrevious()!=NULL)
+    if (tmp->getPrevious() != NULL)
       tmp->getPrevious()->setNext(tmp->getNext());
     else
       first = tmp->getNext();
 
-    if (tmp->getNext()!=NULL)
+    if (tmp->getNext() != NULL)
       tmp->getNext()->setPrevious(tmp->getPrevious());
     else
       last = tmp->getPrevious();
 
-    size--;
+    size --;
 
     tmp->setNext(NULL);
     tmp->setPrevious(NULL);
@@ -257,7 +258,7 @@ class ProtectedLinkedList : public DataStructure {
   }
 
   bool isEmpty() {
-    return size==0;
+    return size == 0;
   }
 
   bool isFull() {

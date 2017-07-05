@@ -26,14 +26,14 @@ class StaticStack : public Stack<T> {
   //! \param size the size of the stack
   explicit StaticStack(int size) {
     this->size = size;
-    top = -1;
+    top = - 1;
     data = new T[size];
   }
 
   //! create the structure and populate it with the data from the array
   //! \param data an array with data with which the structure will be initialized
   explicit StaticStack(T data[]) : this->data(data) {
-    top = sizeof(data)/sizeof(data[0]);
+    top = sizeof(data) / sizeof(data[0]);
   }
 
   ~StaticStack() { delete[]data; }
@@ -41,13 +41,13 @@ class StaticStack : public Stack<T> {
   void push(T val) {
     if (isFull())
       throw std::out_of_range("The stack is full.");
-    data[++top] = val;
+    data[++ top] = val;
   }
 
   T pop() {
     if (isEmpty())
       throw std::out_of_range("The stack is empty.");
-    return data[top--];
+    return data[top --];
   }
 
   T peek() {
@@ -61,11 +61,11 @@ class StaticStack : public Stack<T> {
   }
 
   bool isEmpty() {
-    return top==-1;
+    return top == - 1;
   }
 
   bool isFull() {
-    return top==size - 1;
+    return top == size - 1;
   }
 };
 

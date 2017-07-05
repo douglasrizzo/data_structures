@@ -35,9 +35,9 @@ class StaticQueue : public Queue<T> {
   explicit StaticQueue(T data[]) {
     this->data = data;
 
-    size = count = (sizeof(data)/sizeof(data[0])) + 1;
+    size = count = (sizeof(data) / sizeof(data[0])) + 1;
     head = 0;
-    tail = (sizeof(data)/sizeof(data[0]));
+    tail = (sizeof(data) / sizeof(data[0]));
   }
 
   ~StaticQueue() { delete[] data; }
@@ -48,8 +48,8 @@ class StaticQueue : public Queue<T> {
     }
 
     data[tail] = val;
-    count++;
-    tail = (tail + 1)%size;
+    count ++;
+    tail = (tail + 1) % size;
   }
 
   T dequeue() {
@@ -57,8 +57,8 @@ class StaticQueue : public Queue<T> {
       throw std::out_of_range("The queue is empty.");
 
     T tmp = data[head];
-    count--;
-    head = (head + 1)%size;
+    count --;
+    head = (head + 1) % size;
 
     return tmp;
   }
@@ -71,9 +71,9 @@ class StaticQueue : public Queue<T> {
 
   int getSize() { return count; }
 
-  bool isEmpty() { return count==0; }
+  bool isEmpty() { return count == 0; }
 
-  bool isFull() { return count==size; }
+  bool isFull() { return count == size; }
 };
 
 #endif
