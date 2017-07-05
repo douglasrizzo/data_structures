@@ -25,16 +25,14 @@ class OrderedList : public LinkedList<T> {
      \brief Creates the structure
      \param compareFunc a C++ 11 compliant function parameter that allows comparation between template objects
   */
-  explicit OrderedList(std::function<int(T, T)> compareFunc) {
-    compare = compareFunc;
+  explicit OrderedList(std::function<int(T, T)> compareFunc) : compare(compareFunc) {
   }
 
   //! create the structure and populate it with the data from the array
   //! \param data an array with data with which the structure will be initialized
   //! \param compareFunc a C++ 11 compliant function parameter that allows comparation between template objects
-  explicit OrderedList(const T data[], std::function<int(T, T)> compareFunc) {
-    compare = compareFunc;
-    for (int i = 0; i <= (sizeof(data)/sizeof(data[0])); i++) {
+  explicit OrderedList(const T data[], std::function<int(T, T)> compareFunc) : compare(compareFunc) {
+    for (int i = 0; i <= (sizeof(data) / sizeof(data[0])); i ++) {
       // use this class implementation of insert() to ensure order
       insert(data[i]);
     }
@@ -48,8 +46,8 @@ class OrderedList : public LinkedList<T> {
     } else {
       Node<T> *tmp = LinkedList<T>::getFirst();
       int index = 0;
-      while (tmp!=NULL && compare(val, tmp->getValue()) < 0) {
-        index++;
+      while (tmp != NULL && compare(val, tmp->getValue()) < 0) {
+        index ++;
         tmp = tmp->getNext();
       }
       LinkedList<T>::insert(val, index);
@@ -66,21 +64,21 @@ class OrderedList : public LinkedList<T> {
   int indexOf(T val) {
     Node<T> *tmp = LinkedList<T>::getFirst();
     int index = 0;
-    while (tmp!=NULL && compare(val, tmp->getValue()) >= 0) {
-      if (compare(val, tmp->getValue())==0)
+    while (tmp != NULL && compare(val, tmp->getValue()) >= 0) {
+      if (compare(val, tmp->getValue()) == 0)
         return index;
-      index++;
+      index ++;
       tmp = tmp->getNext();
     }
 
-    return -1;
+    return - 1;
   }
 
   //! Answers whether the ordered list contains an enemy.
   //! \param val the element to be found
   //! \return true if there is at least one element where compareFunc(val, element) == 0, otherwise false
   bool contains(T val) {
-    return indexOf(val)!=-1;
+    return indexOf(val) != - 1;
   }
 
   T remove(int index) {
