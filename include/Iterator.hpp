@@ -7,7 +7,8 @@
 #ifndef AULA1_ITERATOR_HPP
 #define AULA1_ITERATOR_HPP
 
-//! This object provides iterative powers to classes that have Node as their underlying data storage objects.
+//! This object provides iterative powers to classes that have Node as their
+// underlying data storage objects.
 //! \tparam T The type of object the Node inside the Iterator will hold.
 template<class T>
 class Iterator {

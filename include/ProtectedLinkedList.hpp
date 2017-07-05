@@ -190,7 +190,7 @@ class ProtectedLinkedList : public DataStructure {
   //! Creates an Iterator, an object that allows the sequential
   //! access of values in a Linked List without the search overhead
   //! \return an Iterator starting from the first node of the list
-  virtual Iterator <T> iterator() {
+  virtual Iterator<T> iterator() {
     return Iterator<T>(first);
   }
 
