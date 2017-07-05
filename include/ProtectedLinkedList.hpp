@@ -93,10 +93,9 @@ class ProtectedLinkedList : public DataStructure {
   }
 
   ~ProtectedLinkedList() {
-    Node<T> *tmp;
 
     while (first!=NULL) {
-      tmp = first;
+      Node<T> *tmp = first;
       first = first->getNext();
       delete tmp;
     }
