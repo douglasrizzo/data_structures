@@ -223,12 +223,16 @@ template&lt;class T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="DynamicQueue_8hpp_source.html#l00026">26</a> of file <a class="el" href="DynamicQueue_8hpp_source.html">DynamicQueue.hpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;: <a class="code" href="classProtectedLinkedList.html">ProtectedLinkedList&lt;T&gt;</a>(data) {}</div><div class="ttc" id="classProtectedLinkedList_html"><div class="ttname"><a href="classProtectedLinkedList.html">ProtectedLinkedList</a></div><div class="ttdoc">Doubly-linked list implementation with dynamic memory allocation. </div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00022">ProtectedLinkedList.hpp:22</a></div></div>
+<<<<<<< HEAD
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classDynamicQueue_a2b8cf8757d1a927b55c7e8f934b824c6_cgraph.svg" width="407" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
+=======
+</div><!-- fragment -->
+>>>>>>> 36f9b37... fixed dependency of ProtectedLinkedList to Iterator
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -265,12 +269,16 @@ template&lt;class T&gt; </div>
 <p class="definition">Definition at line <a class="el" href="DynamicQueue_8hpp_source.html#l00032">32</a> of file <a class="el" href="DynamicQueue_8hpp_source.html">DynamicQueue.hpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;              {</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classDynamicQueue.html#a4c0b86d73c9b3c64f64cab764a3baad7">isEmpty</a>())</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;The queue is empty&quot;</span>);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classProtectedLinkedList.html#a87b0381dac498114329cc0ebbf7433dc">ProtectedLinkedList&lt;T&gt;::remove</a>(0);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div><div class="ttc" id="classDynamicQueue_html_a4c0b86d73c9b3c64f64cab764a3baad7"><div class="ttname"><a href="classDynamicQueue.html#a4c0b86d73c9b3c64f64cab764a3baad7">DynamicQueue::isEmpty</a></div><div class="ttdeci">bool isEmpty()</div><div class="ttdoc">Check whether the structure is empty. </div><div class="ttdef"><b>Definition:</b> <a href="DynamicQueue_8hpp_source.html#l00046">DynamicQueue.hpp:46</a></div></div>
 <div class="ttc" id="classProtectedLinkedList_html_a87b0381dac498114329cc0ebbf7433dc"><div class="ttname"><a href="classProtectedLinkedList.html#a87b0381dac498114329cc0ebbf7433dc">ProtectedLinkedList::remove</a></div><div class="ttdeci">virtual T remove(const int index)</div><div class="ttdoc">Remove an element from the list. </div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00151">ProtectedLinkedList.hpp:151</a></div></div>
+<<<<<<< HEAD
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classDynamicQueue_aaba481ddc48bb2327a23326e69c6f245_cgraph.svg" width="366" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
+=======
+</div><!-- fragment -->
+>>>>>>> 36f9b37... fixed dependency of ProtectedLinkedList to Iterator
 </div>
 </div>
 <a id="aa0df1f79d65a9a331de7c2fd6bbb00eb"></a>
@@ -312,12 +320,16 @@ template&lt;class T&gt; </div>
 <p class="definition">Definition at line <a class="el" href="DynamicQueue_8hpp_source.html#l00028">28</a> of file <a class="el" href="DynamicQueue_8hpp_source.html">DynamicQueue.hpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                      {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classProtectedLinkedList.html#a0d10fb09a1ca2f9f6627be9e9594de62">ProtectedLinkedList&lt;T&gt;::insert</a>(val, <a class="code" href="classProtectedLinkedList.html">ProtectedLinkedList&lt;T&gt;::getSize</a>());</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  }</div><div class="ttc" id="classProtectedLinkedList_html"><div class="ttname"><a href="classProtectedLinkedList.html">ProtectedLinkedList</a></div><div class="ttdoc">Doubly-linked list implementation with dynamic memory allocation. </div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00022">ProtectedLinkedList.hpp:22</a></div></div>
 <div class="ttc" id="classProtectedLinkedList_html_a0d10fb09a1ca2f9f6627be9e9594de62"><div class="ttname"><a href="classProtectedLinkedList.html#a0d10fb09a1ca2f9f6627be9e9594de62">ProtectedLinkedList::insert</a></div><div class="ttdeci">virtual void insert(const T val)</div><div class="ttdoc">Insert an element at the end of the list. </div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00089">ProtectedLinkedList.hpp:89</a></div></div>
+<<<<<<< HEAD
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classDynamicQueue_aa0df1f79d65a9a331de7c2fd6bbb00eb_cgraph.svg" width="366" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
+=======
+</div><!-- fragment -->
+>>>>>>> 36f9b37... fixed dependency of ProtectedLinkedList to Iterator
 </div>
 </div>
 <a id="a2f29f0a3fbfebfb6dbd9a92959ccdfa2"></a>
@@ -386,12 +398,16 @@ template&lt;class T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="DynamicQueue_8hpp_source.html#l00044">44</a> of file <a class="el" href="DynamicQueue_8hpp_source.html">DynamicQueue.hpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classProtectedLinkedList.html#a2c645bc1c92a52d7856a6cb1f07e9d5f">ProtectedLinkedList&lt;T&gt;::getSize</a>(); }</div><div class="ttc" id="classProtectedLinkedList_html_a2c645bc1c92a52d7856a6cb1f07e9d5f"><div class="ttname"><a href="classProtectedLinkedList.html#a2c645bc1c92a52d7856a6cb1f07e9d5f">ProtectedLinkedList::getSize</a></div><div class="ttdeci">int getSize()</div><div class="ttdoc">Outputs the number of elements stored in the structure. </div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00200">ProtectedLinkedList.hpp:200</a></div></div>
+<<<<<<< HEAD
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classDynamicQueue_ae43a2dd0394a06d03481a3bffb196a7a_cgraph.svg" width="360" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
+=======
+</div><!-- fragment -->
+>>>>>>> 36f9b37... fixed dependency of ProtectedLinkedList to Iterator
 </div>
 </div>
 <a id="a4c0b86d73c9b3c64f64cab764a3baad7"></a>
@@ -426,12 +442,16 @@ template&lt;class T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="DynamicQueue_8hpp_source.html#l00046">46</a> of file <a class="el" href="DynamicQueue_8hpp_source.html">DynamicQueue.hpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classProtectedLinkedList.html#a822ace4da4397285a6d0211e1c38c779">ProtectedLinkedList&lt;T&gt;::isEmpty</a>(); }</div><div class="ttc" id="classProtectedLinkedList_html_a822ace4da4397285a6d0211e1c38c779"><div class="ttname"><a href="classProtectedLinkedList.html#a822ace4da4397285a6d0211e1c38c779">ProtectedLinkedList::isEmpty</a></div><div class="ttdeci">bool isEmpty()</div><div class="ttdoc">Check whether the structure is empty. </div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00204">ProtectedLinkedList.hpp:204</a></div></div>
+<<<<<<< HEAD
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classDynamicQueue_a4c0b86d73c9b3c64f64cab764a3baad7_cgraph.svg" width="364" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
+=======
+</div><!-- fragment -->
+>>>>>>> 36f9b37... fixed dependency of ProtectedLinkedList to Iterator
 </div>
 </div>
 <a id="afe36f5bc7b10e0a213ae927d905d0c51"></a>
@@ -466,12 +486,16 @@ template&lt;class T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="DynamicQueue_8hpp_source.html#l00048">48</a> of file <a class="el" href="DynamicQueue_8hpp_source.html">DynamicQueue.hpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classProtectedLinkedList.html#a264e204dcc5d4aee73e8c67ae4b2b1fa">ProtectedLinkedList&lt;T&gt;::isFull</a>(); }</div><div class="ttc" id="classProtectedLinkedList_html_a264e204dcc5d4aee73e8c67ae4b2b1fa"><div class="ttname"><a href="classProtectedLinkedList.html#a264e204dcc5d4aee73e8c67ae4b2b1fa">ProtectedLinkedList::isFull</a></div><div class="ttdeci">bool isFull()</div><div class="ttdoc">Check whether the structure is full. </div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00208">ProtectedLinkedList.hpp:208</a></div></div>
+<<<<<<< HEAD
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classDynamicQueue_afe36f5bc7b10e0a213ae927d905d0c51_cgraph.svg" width="347" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
+=======
+</div><!-- fragment -->
+>>>>>>> 36f9b37... fixed dependency of ProtectedLinkedList to Iterator
 </div>
 </div>
 <a id="ae99fcbe790a08cac54ff1f641ddbff55"></a>
@@ -507,12 +531,16 @@ template&lt;class T&gt; </div>
 <p class="definition">Definition at line <a class="el" href="DynamicQueue_8hpp_source.html#l00038">38</a> of file <a class="el" href="DynamicQueue_8hpp_source.html">DynamicQueue.hpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;           {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classDynamicQueue.html#a4c0b86d73c9b3c64f64cab764a3baad7">isEmpty</a>())</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;The queue is empty&quot;</span>);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classProtectedLinkedList.html#a93c97821e8c139b44c9bd4ba9f5946c4">ProtectedLinkedList&lt;T&gt;::get</a>(0);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  }</div><div class="ttc" id="classDynamicQueue_html_a4c0b86d73c9b3c64f64cab764a3baad7"><div class="ttname"><a href="classDynamicQueue.html#a4c0b86d73c9b3c64f64cab764a3baad7">DynamicQueue::isEmpty</a></div><div class="ttdeci">bool isEmpty()</div><div class="ttdoc">Check whether the structure is empty. </div><div class="ttdef"><b>Definition:</b> <a href="DynamicQueue_8hpp_source.html#l00046">DynamicQueue.hpp:46</a></div></div>
 <div class="ttc" id="classProtectedLinkedList_html_a93c97821e8c139b44c9bd4ba9f5946c4"><div class="ttname"><a href="classProtectedLinkedList.html#a93c97821e8c139b44c9bd4ba9f5946c4">ProtectedLinkedList::get</a></div><div class="ttdeci">virtual T get(const int index)</div><div class="ttdoc">Get the element at the specified position in the list, without removing. </div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00182">ProtectedLinkedList.hpp:182</a></div></div>
+<<<<<<< HEAD
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classDynamicQueue_ae99fcbe790a08cac54ff1f641ddbff55_cgraph.svg" width="344" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
+=======
+</div><!-- fragment -->
+>>>>>>> 36f9b37... fixed dependency of ProtectedLinkedList to Iterator
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

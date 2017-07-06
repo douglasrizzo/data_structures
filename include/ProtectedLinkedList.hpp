@@ -11,6 +11,7 @@
 #include <stdexcept>
 #include "Node.hpp"
 #include "DataStructure.hpp"
+#include "Iterator.hpp"
 
 using namespace std;
 
@@ -93,9 +94,9 @@ class ProtectedLinkedList : public DataStructure {
   //! \param val the value to be inserted
   //! \param index position of the list that the element will be inserted on
   virtual void insert(const T val, const int index) {
-    if (index < 0) throw std::out_of_range("Negative index not allowed.");
+    if (index < 0) throw out_of_range("Negative index not allowed.");
 
-    if (index > size) throw std::out_of_range("Nonexistent index.");
+    if (index > size) throw out_of_range("Nonexistent index.");
 
     // if it's the first element on the list, create the first node
     if (size == 0) {
@@ -148,9 +149,9 @@ class ProtectedLinkedList : public DataStructure {
   //! \param index position of the element to be removed
   //! \return the element that is being removed
   virtual T remove(const int index) {
-    if (index < 0) throw std::out_of_range("Negative index not allowed.");
+    if (index < 0) throw out_of_range("Negative index not allowed.");
 
-    if (index >= size) throw std::out_of_range("Nonexistent index in list.");
+    if (index >= size) throw out_of_range("Nonexistent index in list.");
 
     Node<T> *tmp = getNode(index);
 
@@ -179,9 +180,9 @@ class ProtectedLinkedList : public DataStructure {
   // it
   //! \param index index of the desired element
   virtual T get(const int index) {
-    if (index < 0) throw std::out_of_range("Negative index not allowed.");
+    if (index < 0) throw out_of_range("Negative index not allowed.");
 
-    if (index > size) throw std::out_of_range("Nonexistent index.");
+    if (index > size) throw out_of_range("Nonexistent index.");
 
     Node<T> *tmp = getNode(index);
     return tmp->getValue();
