@@ -1,6 +1,7 @@
 <map id="include/DynamicQueue.hpp" name="include/DynamicQueue.hpp">
-<area shape="rect" id="node4" href="$Queue_8hpp.html" title="Queue.hpp" alt="" coords="347,80,433,107"/>
-<area shape="rect" id="node7" href="$ProtectedLinkedList_8hpp.html" title="ProtectedLinkedList.hpp" alt="" coords="161,80,323,107"/>
-<area shape="rect" id="node6" href="$DataStructure_8hpp.html" title="DataStructure.hpp" alt="" coords="279,155,407,181"/>
-<area shape="rect" id="node8" href="$Node_8hpp.html" title="Node.hpp" alt="" coords="125,155,204,181"/>
+<area shape="rect" id="node4" href="$Queue_8hpp.html" title="Queue.hpp" alt="" coords="43,80,128,107"/>
+<area shape="rect" id="node7" href="$ProtectedLinkedList_8hpp.html" title="ProtectedLinkedList.hpp" alt="" coords="209,80,372,107"/>
+<area shape="rect" id="node6" href="$DataStructure_8hpp.html" title="DataStructure.hpp" alt="" coords="21,155,149,181"/>
+<area shape="rect" id="node8" href="$Node_8hpp.html" title="Node.hpp" alt="" coords="329,155,407,181"/>
+<area shape="rect" id="node10" href="$Iterator_8hpp.html" title="Iterator.hpp" alt="" coords="431,155,518,181"/>
 </map>

@@ -297,7 +297,7 @@ template&lt;class T&gt; </div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classOrderedList_a7ae22e189c25baa8748b5bf3de4520f8_cgraph.svg" width="526" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classOrderedList_a7ae22e189c25baa8748b5bf3de4520f8_cgraph.svg" width="348" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -340,12 +340,7 @@ template&lt;class T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="OrderedList_8hpp_source.html#l00089">89</a> of file <a class="el" href="OrderedList_8hpp_source.html">OrderedList.hpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                   {</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classLinkedList.html#a5a63288e20c681b7b4422f3587986532">LinkedList&lt;T&gt;::get</a>(index);</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div><div class="ttc" id="classLinkedList_html_a5a63288e20c681b7b4422f3587986532"><div class="ttname"><a href="classLinkedList.html#a5a63288e20c681b7b4422f3587986532">LinkedList::get</a></div><div class="ttdeci">virtual T get(int index)</div><div class="ttdoc">Get the element at the specified position in the list, without removing it. </div><div class="ttdef"><b>Definition:</b> <a href="LinkedList_8hpp_source.html#l00051">LinkedList.hpp:51</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classOrderedList_aa45cc48c177b9b1325ef724679bc212a_cgraph.svg" width="303" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad8c0d31737faf41dcdaaa35ba1769447"></a>
@@ -420,15 +415,10 @@ template&lt;class T&gt; </div>
 <p class="definition">Definition at line <a class="el" href="OrderedList_8hpp_source.html#l00065">65</a> of file <a class="el" href="OrderedList_8hpp_source.html">OrderedList.hpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                     {</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classNode.html">Node&lt;T&gt;</a> *tmp = <a class="code" href="classProtectedLinkedList.html#ae84c978732883bd45b44372a5a519ee5">LinkedList&lt;T&gt;::getFirst</a>();</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> index = 0;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">while</span> (tmp != NULL &amp;&amp; <a class="code" href="classOrderedList.html#a40320b7b6513b1f48270358cceb66502">compare</a>(val, tmp-&gt;<a class="code" href="classNode.html#aecea97aa9915521fe092d92a8e7fc8b8">getValue</a>()) &gt;= 0) {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classOrderedList.html#a40320b7b6513b1f48270358cceb66502">compare</a>(val, tmp-&gt;<a class="code" href="classNode.html#aecea97aa9915521fe092d92a8e7fc8b8">getValue</a>()) == 0)</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> index;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      index ++;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      tmp = tmp-&gt;<a class="code" href="classNode.html#aa3ef08c649398c76dc38011a91b08d4b">getNext</a>();</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> - 1;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div><div class="ttc" id="classNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdoc">Node used inside other data structures. </div><div class="ttdef"><b>Definition:</b> <a href="Node_8hpp_source.html#l00015">Node.hpp:15</a></div></div>
 <div class="ttc" id="classOrderedList_html_a40320b7b6513b1f48270358cceb66502"><div class="ttname"><a href="classOrderedList.html#a40320b7b6513b1f48270358cceb66502">OrderedList::compare</a></div><div class="ttdeci">function&lt; int(T, T)&gt; compare</div><div class="ttdef"><b>Definition:</b> <a href="OrderedList_8hpp_source.html#l00019">OrderedList.hpp:19</a></div></div>
-<div class="ttc" id="classProtectedLinkedList_html_ae84c978732883bd45b44372a5a519ee5"><div class="ttname"><a href="classProtectedLinkedList.html#ae84c978732883bd45b44372a5a519ee5">ProtectedLinkedList::getFirst</a></div><div class="ttdeci">Node&lt; T &gt; * getFirst() const</div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00078">ProtectedLinkedList.hpp:78</a></div></div>
+<div class="ttc" id="classProtectedLinkedList_html_ae84c978732883bd45b44372a5a519ee5"><div class="ttname"><a href="classProtectedLinkedList.html#ae84c978732883bd45b44372a5a519ee5">ProtectedLinkedList::getFirst</a></div><div class="ttdeci">Node&lt; T &gt; * getFirst() const</div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00079">ProtectedLinkedList.hpp:79</a></div></div>
 <div class="ttc" id="classNode_html_aecea97aa9915521fe092d92a8e7fc8b8"><div class="ttname"><a href="classNode.html#aecea97aa9915521fe092d92a8e7fc8b8">Node::getValue</a></div><div class="ttdeci">T getValue() const</div><div class="ttdef"><b>Definition:</b> <a href="Node_8hpp_source.html#l00031">Node.hpp:31</a></div></div>
 <div class="ttc" id="classNode_html_aa3ef08c649398c76dc38011a91b08d4b"><div class="ttname"><a href="classNode.html#aa3ef08c649398c76dc38011a91b08d4b">Node::getNext</a></div><div class="ttdeci">Node * getNext() const</div><div class="ttdef"><b>Definition:</b> <a href="Node_8hpp_source.html#l00039">Node.hpp:39</a></div></div>
 </div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classOrderedList_ac85cb35a59ea846ff79eebd3743e0b67_cgraph.svg" width="331" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classOrderedList_ac85cb35a59ea846ff79eebd3743e0b67_icgraph.svg" width="348" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
@@ -477,15 +467,10 @@ template&lt;class T&gt; </div>
 <div class="ttc" id="classLinkedList_html_a3b7a53185b8caf67f4ed06064b334a1f"><div class="ttname"><a href="classLinkedList.html#a3b7a53185b8caf67f4ed06064b334a1f">LinkedList::insert</a></div><div class="ttdeci">virtual void insert(T val)</div><div class="ttdoc">Insert an element at the end of the list. </div><div class="ttdef"><b>Definition:</b> <a href="LinkedList_8hpp_source.html#l00031">LinkedList.hpp:31</a></div></div>
 <div class="ttc" id="classOrderedList_html_a40320b7b6513b1f48270358cceb66502"><div class="ttname"><a href="classOrderedList.html#a40320b7b6513b1f48270358cceb66502">OrderedList::compare</a></div><div class="ttdeci">function&lt; int(T, T)&gt; compare</div><div class="ttdef"><b>Definition:</b> <a href="OrderedList_8hpp_source.html#l00019">OrderedList.hpp:19</a></div></div>
 <div class="ttc" id="classLinkedList_html"><div class="ttname"><a href="classLinkedList.html">LinkedList</a></div><div class="ttdoc">Doubly-linked list implementation with dynamic memory allocation. </div><div class="ttdef"><b>Definition:</b> <a href="LinkedList_8hpp_source.html#l00017">LinkedList.hpp:17</a></div></div>
-<div class="ttc" id="classProtectedLinkedList_html_ae84c978732883bd45b44372a5a519ee5"><div class="ttname"><a href="classProtectedLinkedList.html#ae84c978732883bd45b44372a5a519ee5">ProtectedLinkedList::getFirst</a></div><div class="ttdeci">Node&lt; T &gt; * getFirst() const</div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00078">ProtectedLinkedList.hpp:78</a></div></div>
+<div class="ttc" id="classProtectedLinkedList_html_ae84c978732883bd45b44372a5a519ee5"><div class="ttname"><a href="classProtectedLinkedList.html#ae84c978732883bd45b44372a5a519ee5">ProtectedLinkedList::getFirst</a></div><div class="ttdeci">Node&lt; T &gt; * getFirst() const</div><div class="ttdef"><b>Definition:</b> <a href="ProtectedLinkedList_8hpp_source.html#l00079">ProtectedLinkedList.hpp:79</a></div></div>
 <div class="ttc" id="classNode_html_aecea97aa9915521fe092d92a8e7fc8b8"><div class="ttname"><a href="classNode.html#aecea97aa9915521fe092d92a8e7fc8b8">Node::getValue</a></div><div class="ttdeci">T getValue() const</div><div class="ttdef"><b>Definition:</b> <a href="Node_8hpp_source.html#l00031">Node.hpp:31</a></div></div>
 <div class="ttc" id="classNode_html_aa3ef08c649398c76dc38011a91b08d4b"><div class="ttname"><a href="classNode.html#aa3ef08c649398c76dc38011a91b08d4b">Node::getNext</a></div><div class="ttdeci">Node * getNext() const</div><div class="ttdef"><b>Definition:</b> <a href="Node_8hpp_source.html#l00039">Node.hpp:39</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classOrderedList_a630adf103a541785d2ed2954bad3da84_cgraph.svg" width="318" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afa3508d1d87e13ac25edf8c3671d4b87"></a>
@@ -579,12 +564,7 @@ template&lt;class T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="OrderedList_8hpp_source.html#l00085">85</a> of file <a class="el" href="OrderedList_8hpp_source.html">OrderedList.hpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                      {</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classLinkedList.html#a59892db564e687eb178a73acfeec5b8b">LinkedList&lt;T&gt;::remove</a>(index);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div><div class="ttc" id="classLinkedList_html_a59892db564e687eb178a73acfeec5b8b"><div class="ttname"><a href="classLinkedList.html#a59892db564e687eb178a73acfeec5b8b">LinkedList::remove</a></div><div class="ttdeci">virtual T remove(int index)</div><div class="ttdoc">Remove an element from the list. </div><div class="ttdef"><b>Definition:</b> <a href="LinkedList_8hpp_source.html#l00045">LinkedList.hpp:45</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classOrderedList_a5351bc375507ce98efac7102e26ac66d_cgraph.svg" width="328" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
