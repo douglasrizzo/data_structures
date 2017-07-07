@@ -91,6 +91,13 @@ void testaFila(Queue<T> *q, int amount) {
   cout << endl;
 }
 
+void imprimeLista(LinkedList<int> *l) {
+  Iterator<int> iter = l->iterator();
+  while (iter.hasNext())
+    cout << iter.next() << " ";
+  cout << endl;
+}
+
 template<class T>
 void testaLista(LinkedList<T> *l, bool order) {
 
@@ -102,29 +109,31 @@ void testaLista(LinkedList<T> *l, bool order) {
   if (order) {
     for (int i = 0; i < 8; i ++) {
       l->insert(values[i], orders[i]);
-      cout << l->to_string();
+      imprimeLista(l);
     }
   }
   else {
     for (int i = 0; i < 8; i ++) {
       l->insert(values[i]);
-      cout << l->to_string();
+      imprimeLista(l);
     }
   }
 
+  delete [] values, orders;
+
   cout << "\nRemovendo valores da lista...\n";
   l->remove(4);
-  cout << l->to_string();
+  imprimeLista(l);
   l->remove(1);
-  cout << l->to_string();
+  imprimeLista(l);
   l->remove(3);
-  cout << l->to_string();
+  imprimeLista(l);
   l->remove(1);
-  cout << l->to_string();
+  imprimeLista(l);
   l->remove(1);
-  cout << l->to_string();
+  imprimeLista(l);
   l->remove(0);
-  cout << l->to_string();
+  imprimeLista(l);
 }
 
 void testaUnderflow() {
