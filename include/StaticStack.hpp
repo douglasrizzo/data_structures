@@ -32,7 +32,7 @@ class StaticStack : public Stack<T> {
 
   //! create the structure and populate it with the data from the array
   //! \param data an array with data with which the structure will be initialized
-  explicit StaticStack(T data[]) : this->data(data) {
+  explicit StaticStack(T data[]) : data(data) {
     top = sizeof(data) / sizeof(data[0]);
   }
 
