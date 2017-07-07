@@ -13,15 +13,15 @@ template<class T>
 class Iterator {
  private:
 
-  Node <T> *node;
-  bool firstRun = true;
+  Node<T> *node;
+  bool firstRun;
 
  public:
 
   //! Creates an iterator.
   //! \param n The starting node for the iteration
-  explicit Iterator(Node <T> *n) {
-    node = n;
+  explicit Iterator(Node<T> *n) : node(n) {
+    firstRun = true;
   }
 
   //! Returns whether the iterator has a next value to explore.

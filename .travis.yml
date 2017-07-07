@@ -3,5 +3,5 @@ language: cpp
 compiler: gcc
 
 script:
-  - g++ test/main.cpp -I include -o datastructures
+  - g++ -std=c++0x test/main.cpp -I include -o datastructures
   - ./datastructures
