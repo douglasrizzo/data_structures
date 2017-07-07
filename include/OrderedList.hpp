@@ -47,7 +47,7 @@ class OrderedList : public LinkedList<T> {
     else {
       Node<T> *tmp = LinkedList<T>::getFirst();
       int index = 0;
-      while (tmp != NULL && compare(val, tmp->getValue()) < 0) {
+      while (tmp != NULL && compare(val, tmp->getValue()) <= 0) {
         index ++;
         tmp = tmp->getNext();
       }
