@@ -20,8 +20,8 @@ int compare(int a, int b) {
 }
 
 template<class T>
-void testaPilha(Stack<T> *s, int amount) {
-  cout << "Inserindo " << amount << " valores na pilha de tipo " << s->getName() << "...\n";
+void testStack(Stack<T> *s, int amount) {
+  cout << "Inserting " << amount << " values in the " << s->getName() << "...\n";
   try {
     for (int i = 1; i <= amount; i ++) {
 
@@ -29,7 +29,7 @@ void testaPilha(Stack<T> *s, int amount) {
       cout << i << " ";
     }
 
-    cout << endl << "Removendo valores da pilha...\n";
+    cout << endl << "Removing values from the stack...\n";
     while (s->getSize() > 0) {
       if (s->getSize() % 10 == 0) {
         cout << "[" << s->peek() << "] ";
@@ -38,37 +38,13 @@ void testaPilha(Stack<T> *s, int amount) {
     }
   }
   catch (const std::out_of_range &oor) {
-    std::cout << "Ocorreu um erro: " << oor.what() << '\n';
+    std::cout << "An error occurred: " << oor.what() << '\n';
   }
   cout << endl;
 }
 
 template<class T>
-void testaLista(LinkedList<T> *l, int amount) {
-  try {
-    cout << "Inserindo " << amount << " valores na fila de tipo " << l->getName() << "...\n";
-    for (int i = 1; i <= amount; i ++) {
-      l->insert(i);
-      cout << i << " ";
-    }
-
-    cout << endl << "Removendo valores da fila...\n";
-
-    while (l->getSize() > 0) {
-      if (l->getSize() % 10 == 0) {
-        cout << "[" << l->get(l->getSize() - 1) << "] ";
-      }
-      cout << l->remove(0) << " ";
-    }
-  }
-  catch (const std::out_of_range &oor) {
-    std::cout << "Ocorreu um erro: " << oor.what() << '\n';
-  }
-  cout << endl;
-}
-
-template<class T>
-void testaFila(Queue<T> *q, int amount) {
+void testQueue(Queue<T> *q, int amount) {
   try {
     cout << "Inserindo " << amount << " valores na fila de tipo " << q->getName() << "...\n";
     for (int i = 1; i <= amount; i ++) {
@@ -86,12 +62,12 @@ void testaFila(Queue<T> *q, int amount) {
     }
   }
   catch (const std::out_of_range &oor) {
-    std::cout << "Ocorreu um erro: " << oor.what() << '\n';
+    std::cout << "An error has occurred: " << oor.what() << '\n';
   }
   cout << endl;
 }
 
-void imprimeLista(LinkedList<int> *l) {
+void printList(LinkedList<int> *l) {
   Iterator<int> iter = l->iterator();
   while (iter.hasNext())
     cout << iter.next() << " ";
@@ -99,7 +75,7 @@ void imprimeLista(LinkedList<int> *l) {
 }
 
 template<class T>
-void testaLista(LinkedList<T> *l, bool order) {
+void testList(LinkedList<T> *l, bool order) {
 
   cout << "\nInserindo valores na lista do tipo " << l->getName() << "...\n";
 
@@ -109,37 +85,37 @@ void testaLista(LinkedList<T> *l, bool order) {
   if (order) {
     for (int i = 0; i < 8; i ++) {
       l->insert(values[i], orders[i]);
-      imprimeLista(l);
+      printList(l);
     }
   }
   else {
     for (int i = 0; i < 8; i ++) {
       l->insert(values[i]);
-      imprimeLista(l);
+      printList(l);
     }
   }
 
-  delete [] values, orders;
+  delete[] values, orders;
 
   cout << "\nRemovendo valores da lista...\n";
   l->remove(4);
-  imprimeLista(l);
+  printList(l);
   l->remove(1);
-  imprimeLista(l);
+  printList(l);
   l->remove(3);
-  imprimeLista(l);
+  printList(l);
   l->remove(1);
-  imprimeLista(l);
+  printList(l);
   l->remove(1);
-  imprimeLista(l);
+  printList(l);
   l->remove(0);
-  imprimeLista(l);
+  printList(l);
 }
 
-void testaUnderflow() {
-  cout << "=====================================\n"
-       << "= Testando underflow nas estruturas =\n"
-       << "=====================================\n";
+void testUnderflow() {
+  cout << "===============================================\n"
+       << "= Testing underflow in static-size structures =\n"
+       << "===============================================\n";
 
   int iters = 6;
   try {
@@ -148,7 +124,7 @@ void testaUnderflow() {
       s1.pop();
   }
   catch (const std::out_of_range &oor) {
-    std::cout << "Ocorreu um erro: " << oor.what() << '\n';
+    std::cout << "An error has occurred: " << oor.what() << '\n';
   }
 
   try {
@@ -157,7 +133,7 @@ void testaUnderflow() {
       s2.pop();
   }
   catch (const std::out_of_range &oor) {
-    std::cout << "Ocorreu um erro: " << oor.what() << '\n';
+    std::cout << "An error has occurred: " << oor.what() << '\n';
   }
 
   try {
@@ -166,7 +142,7 @@ void testaUnderflow() {
       q1.dequeue();
   }
   catch (const std::out_of_range &oor) {
-    std::cout << "Ocorreu um erro: " << oor.what() << '\n';
+    std::cout << "An error has occurred: " << oor.what() << '\n';
   }
 
   try {
@@ -175,7 +151,7 @@ void testaUnderflow() {
       q2.dequeue();
   }
   catch (const std::out_of_range &oor) {
-    std::cout << "Ocorreu um erro: " << oor.what() << '\n';
+    std::cout << "An error has occurred: " << oor.what() << '\n';
   }
 
   try {
@@ -184,7 +160,7 @@ void testaUnderflow() {
       l1.remove(0);
   }
   catch (const std::out_of_range &oor) {
-    std::cout << "Ocorreu um erro: " << oor.what() << '\n';
+    std::cout << "An error has occurred: " << oor.what() << '\n';
   }
 
   try {
@@ -193,19 +169,19 @@ void testaUnderflow() {
       l2.remove(0);
   }
   catch (const std::out_of_range &oor) {
-    std::cout << "Ocorreu um erro: " << oor.what() << '\n';
+    std::cout << "An error has occurred: " << oor.what() << '\n';
   }
 }
 
-void testaOverflow() {
-  cout << "=============================================================\n"
-       << "= Testando overflow nas estruturas de tamanho pré-definido =\n"
-       << "=============================================================\n";
-  testaPilha(new StaticStack<int>(17), 18);
-  testaFila(new StaticQueue<int>(17), 18);
+void testOverflow() {
+  cout << "==============================================\n"
+       << "= Testing overflow in static-size structures =\n"
+       << "==============================================\n";
+  testStack(new StaticStack<int>(17), 18);
+  testQueue(new StaticQueue<int>(17), 18);
 }
 
-void testaUsoSatanico() {
+void testProlongedUse() {
   time_t result = time(nullptr);
   mt19937_64 orelha;
   orelha.seed((unsigned long) std::localtime(&result));
@@ -223,13 +199,14 @@ void testaUsoSatanico() {
   cout << max_iters << endl;
 
   for (int i = 0; i < max_iters; i ++) {
-//        if (i % (max_iters / 1000) == 0) {
-//            cout << "Estrutura\tS\t\t\t\tQ\t\t\t\tLL\t\t\t\tOL\n"
-//                 << "Tamanho\t\t" << s.getSize() << "\t\t\t\t" << q.getSize() << "\t\t\t\t" << l.getSize() << "\t\t\t\t"
-//                 << o.getSize() << "\n"
-//                 << "Inserções\t" << si << "\t\t\t\t" << qi << "\t\t\t\t" << li << "\t\t\t\t" << oi << "\n"
-//                 << "Remoções\t" << so << "\t\t\t\t" << qo << "\t\t\t\t" << lo << "\t\t\t\t" << oo << "\n\n";
-//        }
+    if (i % (max_iters / 1000) == 0) {
+      cout << "Structure\tS\t\t\tQ\t\t\tLL\t\t\tOL\n"
+           << "Size\t\t" << s.getSize() << "\t\t\t" << q.getSize() << "\t\t\t" << l.getSize() << "\t\t\t"
+           << o.getSize() << "\n"
+           << "Insertions\t" << si << "\t\t\t" << qi << "\t\t\t" << li << "\t\t\t" << oi << "\n"
+           << "Removals\t" << so << "\t\t\t" << qo << "\t\t\t" << lo << "\t\t\t" << oo << "\n\n";
+    }
+
     int tmp;
     if ((tmp = (int) orelha()) % 2 == 0 && ! s.isEmpty()) {
       so ++;
@@ -264,27 +241,27 @@ void testaUsoSatanico() {
       o.insert(tmp);
     }
   }
-  cout << "FIM!";
+  cout << "END!";
 }
 
 int main() {
-//    cout
-//            << "************************\n" << "Teste de estruturas de dados\n"
-//            << "Valores entre colchetes representam consultas sem remoção"
-//            << "\n*********************\n\n";
-//
-//    testaPilha(new StaticStack<int>(17), 15);
-//    testaFila(new StaticQueue<int>(17), 15);
-//    testaPilha(new DynamicStack<int>(), 40);
-//    testaFila(new DynamicQueue<int>(), 40);
-//    testaLista(new LinkedList<int>(), true);
-  testaLista(new OrderedList<int>(compare), false);
-  testaLista(new OrderedList<int>(compare), true);
-//
-//    testaOverflow();
-//    testaUnderflow();
+  cout
+      << "************************\n" << "Data structure test\n"
+      << "Values in brackets represent peeks, without removals"
+      << "\n*********************\n\n";
 
-//    testaUsoSatanico();
+  testStack(new StaticStack<int>(17), 15);
+  testQueue(new StaticQueue<int>(17), 15);
+  testStack(new DynamicStack<int>(), 40);
+  testQueue(new DynamicQueue<int>(), 40);
+  testList(new LinkedList<int>(), true);
+  testList(new OrderedList<int>(compare), false);
+  testList(new OrderedList<int>(compare), true);
+
+  testOverflow();
+  testUnderflow();
+
+  testProlongedUse();
 
   return 0;
 }

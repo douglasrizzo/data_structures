@@ -24,7 +24,7 @@ class ProtectedLinkedList : public DataStructure {
 
   Node<T> *first;
   Node<T> *last;
-  int size = 0;
+  int size;
 
  public:
 
@@ -34,6 +34,7 @@ class ProtectedLinkedList : public DataStructure {
 
   ProtectedLinkedList() {
     first = last = NULL;
+    size = 0;
   }
 
   ~ProtectedLinkedList() {

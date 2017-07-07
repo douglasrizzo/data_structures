@@ -1,9 +1,7 @@
-sudo: required
-
 language: cpp
 
 compiler: gcc
 
 script:
-  - g++ test.cpp -I include -o datastructures
+  - g++ -stdlib=libc++ -std=c++0x test/main.cpp -I include -o datastructures
   - ./datastructures
