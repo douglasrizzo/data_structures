@@ -32,8 +32,8 @@ class StaticStack : public Stack<T> {
 
   //! create the structure and populate it with the data from the array
   //! \param data an array with data with which the structure will be initialized
-  explicit StaticStack(T data[]) : data(data) {
-    top = sizeof(data) / sizeof(data[0]);
+  //! \param size the size of the array being passed
+  explicit StaticStack(T data[], int size) : data(data), top(size - 1), size(size) {
   }
 
   ~StaticStack() { delete[]data; }

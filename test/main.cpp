@@ -24,7 +24,6 @@ void testStack(Stack<T> *s, int amount) {
   cout << "Inserting " << amount << " values in the " << s->getName() << "...\n";
   try {
     for (int i = 1; i <= amount; i ++) {
-
       s->push(i);
       cout << i << " ";
     }
@@ -46,13 +45,13 @@ void testStack(Stack<T> *s, int amount) {
 template<class T>
 void testQueue(Queue<T> *q, int amount) {
   try {
-    cout << "Inserindo " << amount << " valores na fila de tipo " << q->getName() << "...\n";
+    cout << "Inserting " << amount << " values in the" << q->getName() << "...\n";
     for (int i = 1; i <= amount; i ++) {
       q->enqueue(i);
       cout << i << " ";
     }
 
-    cout << endl << "Removendo valores da fila...\n";
+    cout << endl << "Removing values from the queue...\n";
 
     while (q->getSize() > 0) {
       if (q->getSize() % 10 == 0) {
@@ -77,7 +76,7 @@ void printList(LinkedList<int> *l) {
 template<class T>
 void testList(LinkedList<T> *l, bool order) {
 
-  cout << "\nInserindo valores na lista do tipo " << l->getName() << "...\n";
+  cout << "\nInserting data in " << l->getName() << "...\n";
 
   int *values = new int[8]{3, 1, 2, 8, 7, 2, 5, 2};
   int *orders = new int[8]{0, 0, 2, 1, 4, 2, 4, 5};
@@ -97,7 +96,7 @@ void testList(LinkedList<T> *l, bool order) {
 
   delete[] values, orders;
 
-  cout << "\nRemovendo valores da lista...\n";
+  cout << "\nRemoving values from list...\n";
   l->remove(4);
   printList(l);
   l->remove(1);
@@ -119,7 +118,7 @@ void testUnderflow() {
 
   int iters = 6;
   try {
-    StaticStack<int> s1 = StaticStack<int>(new int[3]{3, 1, 2});
+    StaticStack<int> s1 = StaticStack<int>(new int[3]{3, 1, 2}, 3);
     for (int i = 0; i < iters; i ++)
       s1.pop();
   }
@@ -128,7 +127,7 @@ void testUnderflow() {
   }
 
   try {
-    DynamicStack<int> s2 = DynamicStack<int>(new int[3]{3, 1, 2});
+    DynamicStack<int> s2 = DynamicStack<int>(new int[3]{3, 1, 2}, 3);
     for (int i = 0; i < iters; i ++)
       s2.pop();
   }
@@ -137,7 +136,7 @@ void testUnderflow() {
   }
 
   try {
-    StaticQueue<int> q1 = StaticQueue<int>(new int[3]{3, 1, 2});
+    StaticQueue<int> q1 = StaticQueue<int>(new int[3]{3, 1, 2}, 3);
     for (int i = 0; i < iters; i ++)
       q1.dequeue();
   }
@@ -146,7 +145,7 @@ void testUnderflow() {
   }
 
   try {
-    DynamicQueue<int> q2 = DynamicQueue<int>(new int[3]{3, 1, 2});
+    DynamicQueue<int> q2 = DynamicQueue<int>(new int[3]{3, 1, 2}, 3);
     for (int i = 0; i < iters; i ++)
       q2.dequeue();
   }
@@ -155,7 +154,7 @@ void testUnderflow() {
   }
 
   try {
-    LinkedList<int> l1 = LinkedList<int>(new int[3]{3, 1, 2});
+    LinkedList<int> l1 = LinkedList<int>(new int[3]{3, 1, 2}, 3);
     for (int i = 0; i < iters; i ++)
       l1.remove(0);
   }
@@ -164,7 +163,7 @@ void testUnderflow() {
   }
 
   try {
-    OrderedList<int> l2 = OrderedList<int>(new int[3]{3, 1, 2}, compare);
+    OrderedList<int> l2 = OrderedList<int>(new int[3]{3, 1, 2}, 3, compare);
     for (int i = 0; i < iters; i ++)
       l2.remove(0);
   }

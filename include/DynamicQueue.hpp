@@ -23,7 +23,8 @@ class DynamicQueue : public ProtectedLinkedList<T>, public Queue<T> {
 
   //! create the structure and populate it with the data from the array
   //! \param data an array with data with which the structure will be initialized
-  explicit DynamicQueue(int data[]) : ProtectedLinkedList<T>(data) {}
+  //! \param size the size of the array being passed
+  explicit DynamicQueue(T data[], int size) : ProtectedLinkedList<T>(data, size) {}
 
   void enqueue(T val) {
     ProtectedLinkedList<T>::insert(val, ProtectedLinkedList<T>::getSize());

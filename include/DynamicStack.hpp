@@ -22,7 +22,8 @@ class DynamicStack : public ProtectedLinkedList<T>, public Stack<T> {
 
   //! create the structure and populate it with the data from the array
   //! \param data an array with data with which the structure will be initialized
-  explicit DynamicStack(T data[]) : ProtectedLinkedList<T>(data) {}
+  //! \param size the size of the array being passed
+  explicit DynamicStack(T data[], int size) : ProtectedLinkedList<T>(data, size) {}
 
   std::string getName() { return "Dynamic Stack"; }
 

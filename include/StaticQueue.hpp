@@ -32,12 +32,9 @@ class StaticQueue : public Queue<T> {
 
   //! create the structure and populate it with the data from the array
   //! \param data an array with data with which the structure will be initialized
-  explicit StaticQueue(T data[]) {
-    this->data = data;
-
-    size = count = (sizeof(data) / sizeof(data[0])) + 1;
+  //! \param size the size of the array being passed
+  explicit StaticQueue(T data[], int size): data(data), size(size+1), count(size+1), tail(size) {
     head = 0;
-    tail = (sizeof(data) / sizeof(data[0]));
   }
 
   ~StaticQueue() { delete[] data; }

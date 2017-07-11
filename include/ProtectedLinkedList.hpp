@@ -69,10 +69,10 @@ class ProtectedLinkedList : public DataStructure {
   }
 
   //! create the structure and populate it with the data from the array
-  //! \param data an array with data with which the structure will be
-  // initialized
-  explicit ProtectedLinkedList(const T data[]) {
-    for (int i = 0; i <= (sizeof(data) / sizeof(data[0])); i ++) {
+  //! \param data an array with data with which the structure will be initialized
+  //! \param size the size of the array being passed
+  explicit ProtectedLinkedList(const T data[], int size) : ProtectedLinkedList() {
+    for (int i = 0; i < size; i ++) {
       insert(data[i]);
     }
   }

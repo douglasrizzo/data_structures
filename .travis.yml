@@ -1,7 +1,0 @@
-language: cpp
-
-compiler: gcc
-
-script:
-  - g++ -stdlib=libc++ -std=c++0x test/main.cpp -I include -o datastructures
-  - ./datastructures

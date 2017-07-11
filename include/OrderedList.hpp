@@ -30,9 +30,10 @@ class OrderedList : public LinkedList<T> {
 
   //! create the structure and populate it with the data from the array
   //! \param data an array with data with which the structure will be initialized
+  //! \param size the size of the array being passed
   //! \param compareFunc a C++ 11 compliant function parameter that allows comparation between template objects
-  explicit OrderedList(const T data[], std::function<int(T, T)> compareFunc) : compare(compareFunc) {
-    for (int i = 0; i <= (sizeof(data) / sizeof(data[0])); i ++) {
+  explicit OrderedList(const T data[], int size ,std::function<int(T, T)> compareFunc) : compare(compareFunc) {
+    for (int i = 0; i <= size; i ++) {
       // use this class implementation of insert() to ensure order
       insert(data[i]);
     }

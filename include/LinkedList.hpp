@@ -21,7 +21,8 @@ class LinkedList : public ProtectedLinkedList<T> {
 
   //! create the structure and populate it with the data from the array
   //! \param data an array with data with which the structure will be initialized
-  explicit LinkedList(T data[]) : ProtectedLinkedList<T>(data) {
+  //! \param size the size of the array being passed
+  explicit LinkedList(T data[], int size) : ProtectedLinkedList<T>(data, size) {
   }
 
   string getName() { return "Linked List"; }
